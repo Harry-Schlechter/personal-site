@@ -69,22 +69,31 @@
 }
 .linkBoxProj{
     margin-bottom:-15px;
-    margin-left: auto;
-    margin-right: -25px;
 }
 .linkBoxProj:hover{
     transform: scale(1.25);
 }
-.linkBoxProj2{
-    margin-left: auto;
-    margin-bottom:-15px;
-    margin-right: -610px;
-}
-.linkBoxProj2:hover{
-    transform: scale(1.25);
-}
+
 .projLinks{
     display:flex;
-    justify-content: right;
-    align-items: right;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: -25px;
+    margin-top:10px;
+}
+
+@media (max-width: 600px) {
+    .compTitle {
+        font-size: x-large;
+        margin-left: 10px;
+    }
+    .compRole {
+        font-style: italic;
+        font-size: larger;
+    }
+    .linkBoxProj2{
+        margin-left: auto;
+        
+        
+    }
 }

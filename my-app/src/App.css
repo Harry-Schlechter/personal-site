@@ -4,16 +4,16 @@
 }
 
 .navbar {
-  width: 100%;
-  background-color: #021526;
+  width: 100%; 
+ background-color: #021526;
   color: white;
   padding: 1rem;
   box-sizing: border-box;
   position: fixed; 
   top: 0;
   left: 0;
-  z-index: 1000; 
-}
+  z-index: 1000;
+} 
 
 .app-container {
   display: flex;
@@ -33,3 +33,10 @@ footer {
   padding: 1rem;
 }
 
+
+@media (max-width: 768px) {
+  .navbar {
+    display:none;
+  }
+
+}

@@ -123,3 +123,19 @@ button:hover {
     align-items: center;
     margin-top: 30px;
   }
+
+  @media (max-width: 600px) {
+    .image-container {
+        width: 300px; 
+        height: 300px; 
+        overflow: hidden; 
+        border-radius: 50%;
+        border-color: #6EACDA;
+        border-style:outset;
+        border-width: 10px;
+        position: relative;
+      }
+      .learn{
+        font-size:medium;
+      }
+  }

@@ -46,7 +46,7 @@ const Projects: React.FC = () => {
                     </ul>
                 </div>
                 <div className='projLinks'>
-                    <div className="linkBoxProj2">
+                    <div className="linkBoxProj">
                         <a href="https://employable.netlify.app/">
                             <FaGlobe size={30} color="black"/>
                         </a>
@@ -71,10 +71,12 @@ const Projects: React.FC = () => {
                         <li>Python | React.js | Flask | TypeScript</li>
                     </ul>
                 </div>
+                <div className='projLinks'>
                 <div className="linkBoxProj">
                     <a href="https://github.com/Harry-Schlechter/EasyGrocy">
                         <FaGithub size={30} color="black"/>
                     </a>
+                </div>
                 </div>
             </div>
             <div className="expBox">
@@ -90,10 +92,12 @@ const Projects: React.FC = () => {
                         <li>Java | OOP | AI</li>
                     </ul>
                 </div>
+                <div className='projLinks'>
                 <div className="linkBoxProj">
                     <a href="https://github.com/Harry-Schlechter/HeartsCardGame">
                         <FaGithub size={30} color="black"/>
                     </a>
+                </div>
                 </div>
             </div>
         </div>

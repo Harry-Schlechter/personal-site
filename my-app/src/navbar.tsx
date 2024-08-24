@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import logo from './pages/mainlogo.png'
+import { FaBars } from 'react-icons/fa';
 
 const Navbar: React.FC = () => {
+
+     const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
+    };
+
     return (
         <nav className="navbar">
-            
-            <ul className="navbar-links">
-                <li>
-                    <Link to="/"><img src={logo} alt="logo"className="logo" /></Link>
-                </li>
+            <div className="under">
+             <Link to="/"><img src={logo} alt="logo"className="logo" /></Link>
+             </div>
+             <div className="toggle-button" onClick={toggleNav}>
+               <FaBars/>
+            </div>
+            <ul className={`navbar-links ${isNavOpen ? 'active' : ''}`}>
                 <li className="under">
                     <Link to="/about">About</Link>
                 </li>
