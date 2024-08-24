@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
                     <Link to="/projects">Projects</Link>
                 </li>
                 <li className="under">
-                    <Link to="https://drive.google.com/file/d/1ITY7qTG_ItwjhBAfY01bTFWumbVXmLd1/view?usp=sharing">Resume</Link>
+                    <Link to="https://drive.google.com/file/d/1PIAy9c66_-BFrp0zysMeXF04Qs3KxfsW/view?usp=sharing">Resume</Link>
                 </li>
             </ul>
         </nav>

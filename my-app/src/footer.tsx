@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                 <a className="footLink"href="https://github.com/Harry-Schlechter">
                     <FaGithub size={30} color="white"/>
                 </a>
-                <a className="footLink"href="https://drive.google.com/file/d/1ITY7qTG_ItwjhBAfY01bTFWumbVXmLd1/view?usp=sharing">
+                <a className="footLink"href="https://drive.google.com/file/d/1PIAy9c66_-BFrp0zysMeXF04Qs3KxfsW/view?usp=sharing">
                     <FaFileAlt size={30} color="white"/>
                 </a>
             </div>
