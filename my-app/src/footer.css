@@ -1,0 +1,36 @@
+.copy {
+    color: white;
+    text-align: center;
+    font-size: large;
+}
+
+hr {
+    width: 80%;
+    margin-bottom:20px;
+    align-items: center;
+}
+a {
+    padding:20px;
+    align-items: center;
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container {
+    margin-top: 100px;
+}
+.footLink:hover{
+    transform: scale(1.25);
+}
+.logo1{
+    width: 60px; 
+    height: 60px;; 
+    border-radius: 10%;
+}
+.logo1:hover{
+    border-color: #6EACDA;
+}
