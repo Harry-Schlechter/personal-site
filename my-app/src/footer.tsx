@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
                 <a className="footLink"href="https://www.linkedin.com/in/harry-schlechter">
                     <FaLinkedin size={30} color="white"/>
                 </a>
-                <Link className="footLink"to="/"><img src={logo} className="logo1" /></Link>
+                <Link className="footLink"to="/"><img src={logo} alt="logo"className="logo1" /></Link>
                 <a className="footLink"href="https://github.com/Harry-Schlechter">
                     <FaGithub size={30} color="white"/>
                 </a>

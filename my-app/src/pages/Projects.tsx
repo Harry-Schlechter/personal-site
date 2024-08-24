@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={flag} className="compLogo"></img>
+                    <img src={flag} alt="bny" className="compLogo"></img>
                     <h2 className="compTitle">RedFlag</h2>
                     <p className="date">02/24-present</p>
                 </div>
@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={emp} className="compLogo"></img>
+                    <img src={emp} alt="bny"  className="compLogo"></img>
                     <h2 className="compTitle">Employable AI</h2>
                     <p className="date">01/24-04/24</p>
                 </div>
@@ -55,7 +55,7 @@ const Projects: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={grocy} className="compLogo"></img>
+                    <img src={grocy}  alt="bny" className="compLogo"></img>
                     <h2 className="compTitle">Easy Grocy</h2>
                     <p className="date">03/22-04/22</p>
                 </div>
@@ -74,7 +74,7 @@ const Projects: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={heart} className="compLogo"></img>
+                    <img src={heart}  alt="bny" className="compLogo"></img>
                     <h2 className="compTitle">Hearts Card Game</h2>
                     <p className="date">12/21-01/22</p>
                 </div>

@@ -13,7 +13,7 @@ const Experience: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={bny} className="compLogo"></img>
+                    <img src={bny} alt="bny"className="compLogo"></img>
                     <h2 className="compTitle">BNY</h2>
                     <p className="date">08/24-present</p>
                 </div>
@@ -28,7 +28,7 @@ const Experience: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={bny} className="compLogo"></img>
+                    <img src={bny} alt="bny" className="compLogo"></img>
                     <h2 className="compTitle">BNY</h2>
                     <p className="date">06/23-08/23</p>
                 </div>
@@ -47,7 +47,7 @@ const Experience: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={wabtec} className="compLogo"></img>
+                    <img src={wabtec} alt="wab" className="compLogo"></img>
                     <h2 className="compTitle">Wabtec</h2>
                     <p className="date">05/22-08/22</p>
                 </div>
@@ -66,7 +66,7 @@ const Experience: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={wabtec} className="compLogo"></img>
+                    <img src={wabtec} alt="wab" className="compLogo"></img>
                     <h2 className="compTitle">Wabtec</h2>
                     <p className="date">01/23-04/23</p>
                 </div>
@@ -85,7 +85,7 @@ const Experience: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={pitt} className="compLogo"></img>
+                    <img src={pitt} alt="pitt" className="compLogo"></img>
                     <h2 className="compTitle">University of Pittsburgh</h2>
                     <p className="date">01/22-04/24</p>
                 </div>

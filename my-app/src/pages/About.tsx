@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import './About.css';
 import prof from './prof.jpeg'
-import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt, FaAngleRight} from 'react-icons/fa'  
-import { useNavigate } from 'react-router-dom';                                         
+import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt, FaAngleRight} from 'react-icons/fa'                                      
 
 
 const About: React.FC = () => {
@@ -11,11 +10,6 @@ const About: React.FC = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const router = useNavigate();
-
-    const exp = () =>{
-        router('/experience');
-    }
     return (
         <div className="about-container">
             <div className="aboutTop">
@@ -24,7 +18,7 @@ const About: React.FC = () => {
             <div className="about">
                 <div className="left">
                     <div className="pic">
-                        <img src={prof} className="center-top-image" />
+                        <img src={prof} alt="prof"className="center-top-image" />
                     </div>
                 </div>
                 <div className="info">

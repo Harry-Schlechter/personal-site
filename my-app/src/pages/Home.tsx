@@ -1,5 +1,4 @@
 
-import React, { useEffect } from 'react';
 import prof from './prof.jpeg'
 import './Home.css'
 import { useNavigate } from 'react-router-dom'; 
