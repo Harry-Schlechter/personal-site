@@ -29,7 +29,7 @@
     border-radius: 10px;
     width: 80%;
     max-width:708.75px;
-    min-width: 400px;
+    min-width: 375px;
     border-style: outset;
     margin-bottom: 30px;
 }
@@ -41,7 +41,7 @@
     margin-bottom: 10px;
     width: 80%;
     max-width:708.75px;
-    min-width: 400px;
+    min-width: 375px;
     border-style: outset;
 }
 
@@ -118,7 +118,7 @@ a{
     border-radius: 10px;
     width: 80%;
     max-width:708.75px;
-    min-width: 400px;
+    min-width: 375px;
     margin-bottom: 20px;
     border-style: outset;
 }
@@ -155,4 +155,15 @@ a{
     border-radius: 10px;
     font-size:medium;
     cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+.info {
+    color: black;
+    margin-top:7px;
+    font-weight: 500;
+    font-size: medium;
+    margin-left:30px;
+}
 }

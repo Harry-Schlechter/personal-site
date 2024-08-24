@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
 
     return (
         <nav className="navbar">
-            <div className="under">
+            <div>
              <Link to="/"><img src={logo} alt="logo"className="logo" /></Link>
              </div>
              <div className="toggle-button" onClick={toggleNav}>
