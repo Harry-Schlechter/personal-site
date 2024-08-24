@@ -3,6 +3,7 @@ import prof from './prof.jpeg'
 import './Home.css'
 import { useNavigate } from 'react-router-dom'; 
 import logo from './mainlogo.png'
+import { useEffect } from 'react';
 
 
 const Home: React.FC = () => {
@@ -10,6 +11,9 @@ const Home: React.FC = () => {
     const about = () =>{
         router('/about');
     }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="page-container">

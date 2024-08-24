@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #021526;
+  background-color: white;
 }
 
 .navbar {
@@ -19,6 +19,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+
 }
 
 .main-content {
@@ -27,7 +28,6 @@
 
 footer {
   width: 100%;
-  background-color: #333;
   color: white;
   text-align: center;
   padding: 1rem;

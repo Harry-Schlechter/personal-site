@@ -43,6 +43,7 @@
     max-width:708.75px;
     min-width: 375px;
     border-style: outset;
+    /* line-height: 2;  */
 }
 
 .aboutButtons{
@@ -121,6 +122,8 @@ a{
     min-width: 375px;
     margin-bottom: 20px;
     border-style: outset;
+    /* letter-spacing: 1px; */
+    line-height: 2; 
 }
 .skills{
     display:flex;
@@ -145,7 +148,7 @@ a{
     color: black;
 }
 .bubble:hover {
-    transform: scale(1.1); 
+    transform: scale(1.5); 
 }
 .expBut {
     color: black;

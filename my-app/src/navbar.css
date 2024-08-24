@@ -1,14 +1,17 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
-    background-color: #333;
+    justify-content: left;
+    background-color: #021526;
     padding: 2rem;
     padding-left: 12px;
+    border-color: white;
+    border-width: 5px;;
 }
 
 .navbar-links {
     list-style: none;
     display: flex;
+
     font-size: larger;
 }
 
@@ -25,7 +28,7 @@
     height: 2px; 
     bottom: 0;
     left: 0;
-    background-color: #021526;
+    background-color: gray;
     visibility: hidden;
     transition: width 0.3s ease, visibility 0.3s ease;
     transform: translateX(23%);
@@ -65,17 +68,16 @@
         width: 100%;
         padding: 1rem;
         text-align:center;
-        margin-top:5px;
-        background-color: #333;
+        margin-top:70px;
+        background-color: #021526;
         position: absolute;
-        top: 70px; /* Adjust based on your design */
         left: 0;
         z-index: 1;
-
     }
 
     .navbar-links.active {
         display: flex;
+        
     }
 
     .navbar .toggle-button {
@@ -92,6 +94,9 @@
     }
     .under{
         margin-bottom: 40px;
+    }
+    .navbar {
+        justify-content: space-between;
     }
 }
   
