@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import flag from './flag.webp'
 import emp from './emp.webp'
 import heart from './hearts2.png'
@@ -7,6 +7,11 @@ import { FaGithub,  FaGlobe} from 'react-icons/fa';
 import './Projects.css'
 
 const Projects: React.FC = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="exp-container">
             <div className="expBoxTop">

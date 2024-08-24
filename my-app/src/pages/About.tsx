@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './About.css';
 import prof from './prof.jpeg'
 import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt, FaAngleRight} from 'react-icons/fa'                                      
+import { Link } from 'react-router-dom';
 
 
 const About: React.FC = () => {
@@ -103,10 +104,8 @@ const About: React.FC = () => {
             </div>
             
                 <div className="linkBox">
-                    <a href="/experience">
-                        <FaAngleRight size={30} color="white"/>
-                        <p className="linkT">Experiences</p>
-                    </a>
+                <Link to="/experience"><FaAngleRight size={30} color="white"/>
+                        <p className="linkT">Experiences</p></Link>
                 </div>
             </div>
     );

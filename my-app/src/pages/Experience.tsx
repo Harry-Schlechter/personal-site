@@ -3,8 +3,14 @@ import bny from './bny.jpeg'
 import wabtec from './wabtec.jpeg'
 import pitt from './pittSCI.jpeg'
 import { FaAngleRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Experience: React.FC = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="exp-container">
@@ -100,10 +106,8 @@ const Experience: React.FC = () => {
                 </div>
             </div>
             <div className="linkBox">
-                    <a href="/projects">
-                        <FaAngleRight size={30} color="white"/>
-                        <p className="linkT">Projects</p>
-                    </a>
+                <Link to="/projects"><FaAngleRight size={30} color="white"/>
+                        <p className="linkT">Projects</p></Link>
                 </div>
         </div>
     )
