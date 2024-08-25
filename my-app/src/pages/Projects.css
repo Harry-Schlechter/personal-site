@@ -82,6 +82,16 @@
     margin-top:10px;
 }
 
+.thanks {
+    padding: 20px;
+}
+.thanksP {
+    color:white;
+    text-align: center;
+    font-size: medium;
+    font-style: italic;
+}
+
 @media (max-width: 600px) {
     .compTitle {
         font-size: x-large;

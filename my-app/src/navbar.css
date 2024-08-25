@@ -4,10 +4,7 @@
     background-color: #021526;
     padding: 2rem;
     padding-left: 12px;
-    border-color: white;
-    border-width: 5px;;
 }
-
 .navbar-links {
     list-style: none;
     display: flex;
@@ -68,7 +65,7 @@
         width: 100%;
         padding: 1rem;
         text-align:center;
-        margin-top:70px;
+        margin-top:60px;
         background-color: #021526;
         position: absolute;
         left: 0;
@@ -87,10 +84,10 @@
         font-size: 1.5em;
     }
     .under::after {
-        display: none;
+        transform: translateX(195%);
     }
     .under:hover::after {
-       display:none;
+        width: 20%;
     }
     .under{
         margin-bottom: 40px;

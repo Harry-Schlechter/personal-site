@@ -3,8 +3,9 @@ import flag from './flag.webp'
 import emp from './emp.webp'
 import heart from './hearts2.png'
 import grocy from './grocy.webp'
-import { FaGithub,  FaGlobe} from 'react-icons/fa';
+import { FaAngleRight, FaGithub,  FaGlobe} from 'react-icons/fa';
 import './Projects.css'
+import { Link } from 'react-router-dom';
 
 const Projects: React.FC = () => {
 
@@ -99,6 +100,13 @@ const Projects: React.FC = () => {
                     </a>
                 </div>
                 </div>
+            </div>
+            <div className="linkBox">
+                <Link to="https://drive.google.com/file/d/1PIAy9c66_-BFrp0zysMeXF04Qs3KxfsW/view?usp=sharing"><FaAngleRight size={30} color="white"/>
+                        <p className="linkT">Resume</p></Link>
+            </div>
+            <div className="thanks">
+                <p className="thanksP">Thank you for taking the time to learn about me, don't forget to connect or contact me!</p>
             </div>
         </div>
     );
