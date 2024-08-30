@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                 <a className="footLink" href="mailto:harry.schlechter391@gmail.com">
                     <FaEnvelope size={30} color="white"/>
                 </a>
-                <a className="footLink"href="https://www.linkedin.com/in/harry-schlechter">
+                <a className="footLink"href="https://www.linkedin.com/in/harryschlechter/">
                     <FaLinkedin size={30} color="white"/>
                 </a>
                 <Link className="footLink"to="/"><img src={logo} alt="logo"className="logo1" /></Link>
