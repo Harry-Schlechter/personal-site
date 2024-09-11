@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
                     <Link to="/projects">Projects</Link>
                 </li>
                 <li className="under">
-                    <Link to="https://drive.google.com/file/d/1PIAy9c66_-BFrp0zysMeXF04Qs3KxfsW/view?usp=sharing">Resume</Link>
+                    <Link to="https://drive.google.com/file/d/1LqpB3Q_GpPeVW8e7OyDNP4mckmMO7IUG/view?usp=sharing">Resume</Link>
                 </li>
             </ul>
         </nav>

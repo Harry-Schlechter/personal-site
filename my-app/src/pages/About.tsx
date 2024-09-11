@@ -52,7 +52,7 @@ const About: React.FC = () => {
                     </a>
                 </div>
                 <div className="linkBox">
-                    <a href="https://drive.google.com/file/d/1PIAy9c66_-BFrp0zysMeXF04Qs3KxfsW/view?usp=sharing">
+                    <a href="https://drive.google.com/file/d/1LqpB3Q_GpPeVW8e7OyDNP4mckmMO7IUG/view?usp=sharing">
                         <FaFileAlt size={30} color="white"/>
                         <p className="linkT">Resume</p>
                     </a>

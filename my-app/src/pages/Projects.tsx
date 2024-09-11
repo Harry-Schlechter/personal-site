@@ -102,7 +102,7 @@ const Projects: React.FC = () => {
                 </div>
             </div>
             <div className="linkBox">
-                <Link to="https://drive.google.com/file/d/1PIAy9c66_-BFrp0zysMeXF04Qs3KxfsW/view?usp=sharing"><FaAngleRight size={30} color="white"/>
+                <Link to="https://drive.google.com/file/d/1LqpB3Q_GpPeVW8e7OyDNP4mckmMO7IUG/view?usp=sharing"><FaAngleRight size={30} color="white"/>
                         <p className="linkT">Resume</p></Link>
             </div>
             <div className="thanks">
