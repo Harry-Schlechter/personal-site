@@ -52,7 +52,7 @@ const About: React.FC = () => {
                     </a>
                 </div>
                 <div className="linkBox">
-                    <a href="https://drive.google.com/file/d/1LqpB3Q_GpPeVW8e7OyDNP4mckmMO7IUG/view?usp=sharing">
+                    <a href="https://drive.google.com/file/d/1BomMN36yv9RqGvbu9f2tC1jzwC-lbwzE/view?usp=sharing">
                         <FaFileAlt size={30} color="white"/>
                         <p className="linkT">Resume</p>
                     </a>
@@ -95,7 +95,7 @@ const About: React.FC = () => {
                     <p>
                     On a personal note, I live in Pittsburgh, PA, and have lived here since I moved to college. I may
                     have been here for a few years, but I always love to hear new recommendations and try new things! I grew up in Floral Park, NY
-                    very close to New York City, and hope to move back in the future. In my free time, I like to play pick-up basketball and soccer, run,
+                    very close to New York City, and hope to move back in the future. In my free time, I like to cook, play pick-up basketball and soccer, run,
                     play poker, go to hockey games, read, and more. I like to keep myself and my mind active.</p><br></br>
                     <p>
                     I love meeting and talking with new people so feel free to connect with me or contact me! 
