@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
                         <li>Co-Founder, Project Manager, and Engineer for enterprise</li>
                         <li>Social media platform, dating app, verification API, and more</li>
                         <li>Repo is not currently available but feel free to contact me if you have any questions or are just curious</li>
-                        <li>Next.jS | Supabase | Vercell | React.js | Postgres</li>
+                        <li>Next.js | Supabase | Vercell | React.js | Postgres</li>
                     </ul>
                 </div>
             </div>
