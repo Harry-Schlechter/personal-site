@@ -3,6 +3,7 @@ import './About.css';
 import prof from './prof.jpeg'
 import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt, FaAngleRight} from 'react-icons/fa'                                      
 import { Link } from 'react-router-dom';
+import resumeLink from '../ResumeLink';
 
 
 const About: React.FC = () => {
@@ -52,7 +53,7 @@ const About: React.FC = () => {
                     </a>
                 </div>
                 <div className="linkBox">
-                    <a href="https://drive.google.com/file/d/1BomMN36yv9RqGvbu9f2tC1jzwC-lbwzE/view?usp=sharing">
+                    <a href={resumeLink}>
                         <FaFileAlt size={30} color="white"/>
                         <p className="linkT">Resume</p>
                     </a>
@@ -68,6 +69,7 @@ const About: React.FC = () => {
                     <li className="bubble">React.js</li>
                     <li className="bubble">Angular</li>
                     <li className="bubble">Java Spring Boot</li>
+                    <li className="bubble">SQL</li>
                     <li className="bubble">Next.js</li>
                     <li className="bubble">C</li>
                     <li className="bubble">HTML</li>
@@ -75,19 +77,26 @@ const About: React.FC = () => {
                     <li className="bubble">TypeScript</li>
                     <li className="bubble">JavaScript</li>
                     <li className="bubble">R</li>
-                    <li className="bubble">SQA</li>
+                    <li className="bubble">JUnit</li>
+                    <li className="bubble">Mockito</li>
                     <li className="bubble">Git</li>
                     <li className="bubble">Node.js</li>
                     <li className="bubble">Agile</li>
                     <li className="bubble">GCP</li>
-                    <li className="bubble">FastAPI</li>
-                    <li className="bubble">Gemini API</li>
+                    <li className="bubble">Flask</li>
+                    <li className="bubble">Maven</li>
+                    <li className="bubble">ActiveMQ</li>
+                    <li className="bubble">OracleDB</li>
+                    <li className="bubble">Supabase</li>
+                    <li className="bubble">Splunk</li>
+                    <li className="bubble">SplunkSOAR</li>
+                    <li className="bubble">R</li>
                     <li className="bubble">Flask</li>
                 </ul>
             <div className="aboutInfo">
             <h2 className='skillT'>A Bit About Me</h2>
             <p>Hello, my name is Harry Schlechter and I am a software engineer, entrepreneur, creator, life-long learner, and more.
-                   I am currently working as a full-stack software engineer at BNY in their analyst development program. I graduated summa cum laude from
+                   I am currently working as a back-end software engineer at BNY on their global payment engine. I graduated summa cum laude from
                    the University of Pittsburgh's David C. Frederick Honors College with a Bachelor of Science in both computer science and psychology.
                    My psychology background gives me a unique perspective as a developer allowing me to more effectively recognize consumer and customer
                     needs, interact with others, and one day excel in a management position. I have a diverse background of full-stack development experience and skills I have acquired

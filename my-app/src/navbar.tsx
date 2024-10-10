@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './navbar.css';
 import logo from './pages/mainlogo.png'
 import { FaBars } from 'react-icons/fa';
+import resumeLink from './ResumeLink';
 
 const Navbar: React.FC = () => {
 
@@ -52,7 +53,7 @@ const Navbar: React.FC = () => {
                     <Link to="/projects">Projects</Link>
                 </li>
                 <li className="under">
-                    <Link to="https://drive.google.com/file/d/1BomMN36yv9RqGvbu9f2tC1jzwC-lbwzE/view?usp=sharing">Resume</Link>
+                    <Link to={resumeLink}>Resume</Link>
                 </li>
             </ul>
         </nav>

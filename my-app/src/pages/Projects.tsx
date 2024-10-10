@@ -6,6 +6,7 @@ import grocy from './grocy.webp'
 import { FaAngleRight, FaGithub,  FaGlobe} from 'react-icons/fa';
 import './Projects.css'
 import { Link } from 'react-router-dom';
+import resumeLink from '../ResumeLink';
 
 const Projects: React.FC = () => {
 
@@ -102,7 +103,7 @@ const Projects: React.FC = () => {
                 </div>
             </div>
             <div className="linkBox">
-                <Link to="https://drive.google.com/file/d/1BomMN36yv9RqGvbu9f2tC1jzwC-lbwzE/view?usp=sharing"><FaAngleRight size={30} color="white"/>
+                <Link to={resumeLink}><FaAngleRight size={30} color="white"/>
                         <p className="linkT">Resume</p></Link>
             </div>
             <div className="thanks">

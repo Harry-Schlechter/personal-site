@@ -28,7 +28,9 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>New grad analyst program software engineer</li>
+                        <li>Back-End engineer for global payment engine using Java Spring Boot</li>
+                        <li>Helped increase traffic from legacy engine to modern payment engine by enhacing payment repair process. This allows transactions to be manually fixed and stay within modern engine</li>
+                        <li>Achieved 80%+ coverage on all new code developed by writing unit tests using JUnit and Mockito</li>
                     </ul>
                 </div>
             </div>

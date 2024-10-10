@@ -3,6 +3,7 @@ import './footer.css';
 import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa'
 import logo from './pages/mainlogo.png'
 import { Link } from 'react-router-dom';
+import resumeLink from './ResumeLink';
 
 
 const Footer: React.FC = () => {
@@ -23,7 +24,7 @@ const Footer: React.FC = () => {
                 <a className="footLink"href="https://github.com/Harry-Schlechter">
                     <FaGithub size={30} color="white"/>
                 </a>
-                <a className="footLink"href="https://drive.google.com/file/d/1BomMN36yv9RqGvbu9f2tC1jzwC-lbwzE/view?usp=sharing">
+                <a className="footLink"href={resumeLink}>
                     <FaFileAlt size={30} color="white"/>
                 </a>
             </div>
