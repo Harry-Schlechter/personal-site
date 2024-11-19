@@ -2,6 +2,7 @@ import './Experience.css';
 import bny from './bny.jpeg'
 import wabtec from './wabtec.jpeg'
 import pitt from './pittSCI.jpeg'
+import healfast from './healfast.jpeg'
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -33,6 +34,23 @@ const Experience: React.FC = () => {
                         <li>Achieved 80%+ coverage on all new code developed by writing unit tests using JUnit and Mockito</li>
                     </ul>
                 </div>
+            </div>
+            <div className="expBox">
+                <div className="topBox">
+                    <img src={healfast} alt="healfast"className="compLogo"></img>
+                    <h2 className="compTitle">HealFast, Inc</h2>
+                    <p className="date">10/24-present</p>
+                </div>
+                <div className="midBox">
+                    <h2 className="compRole">Software Engineer</h2>
+                </div>
+                {/* <div className="botBox">
+                    <ul>
+                        <li>Back-End engineer for global payment engine using Java Spring Boot</li>
+                        <li>Helped increase traffic from legacy engine to modern payment engine by enhacing payment repair process. This allows transactions to be manually fixed and stay within modern engine</li>
+                        <li>Achieved 80%+ coverage on all new code developed by writing unit tests using JUnit and Mockito</li>
+                    </ul>
+                </div> */}
             </div>
             <div className="expBox">
                 <div className="topBox">

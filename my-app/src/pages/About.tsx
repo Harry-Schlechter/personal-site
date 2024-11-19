@@ -92,11 +92,14 @@ const About: React.FC = () => {
                     <li className="bubble">SplunkSOAR</li>
                     <li className="bubble">R</li>
                     <li className="bubble">Flask</li>
+                    <li className="bubble">Shopify</li>
+                    <li className="bubble">BigQuery</li>
                 </ul>
             <div className="aboutInfo">
             <h2 className='skillT'>A Bit About Me</h2>
             <p>Hello, my name is Harry Schlechter and I am a software engineer, entrepreneur, creator, life-long learner, and more.
-                   I am currently working as a back-end software engineer at BNY on their global payment engine. I graduated summa cum laude from
+                   I am currently working as a back-end software engineer at BNY on their global payment engine. In my free time I work part-time as a full-stack engineer 
+                   for a fast-growing startup, HealFast. I graduated summa cum laude from
                    the University of Pittsburgh's David C. Frederick Honors College with a Bachelor of Science in both computer science and psychology.
                    My psychology background gives me a unique perspective as a developer allowing me to more effectively recognize consumer and customer
                     needs, interact with others, and one day excel in a management position. I have a diverse background of full-stack development experience and skills I have acquired
