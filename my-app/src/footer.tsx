@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                 </a>
             </div>
         </div>
-        <p className="copy">&copy; 2024 Harry Schlechter</p>
+        <p className="copy">&copy; 2025 Harry Schlechter</p>
         </>
     )
 };

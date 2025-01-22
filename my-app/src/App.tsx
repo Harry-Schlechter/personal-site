@@ -7,6 +7,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Navbar from './navbar';
 import Footer from './footer';
+import BusinessCard from './pages/BusinessCard';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/experience" element={<Experience />} />
                 <Route path="/projects" element={<Projects />} />
+                <Route path="/hello" element={<BusinessCard />} />
             </Routes>
             </main>
             <Footer/>
