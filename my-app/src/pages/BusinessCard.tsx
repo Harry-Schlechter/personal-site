@@ -101,7 +101,9 @@ const BusinessCard = () => {
           .icon-container {
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            gap: 0px; /* Minimal gap for tightly packed icons */
+            justify-content: center;
+            margin-top: 10px; /* Adjust spacing from the content above */
           }
 
           .icon-circle {
@@ -113,6 +115,7 @@ const BusinessCard = () => {
             justify-content: center;
             align-items: center;
             transition: transform 0.3s ease;
+            padding: 0; /* Ensure no extra padding */
           }
 
           .icon-circle:hover {
