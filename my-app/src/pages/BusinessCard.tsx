@@ -5,8 +5,7 @@ import TypewriterEffect from "./typed";
 import { Link, useNavigate } from "react-router-dom";
 import Home from "./Home";
 
-const BusinessCard = () => {
-  const [showPopup, setShowPopup] = useState(true);
+const BusinessCard = () => { 
 
   const navigate = useNavigate();
   
@@ -166,7 +165,7 @@ const BusinessCard = () => {
           }
         `}
       </style>
-      {showPopup && (
+      {(
         <>
           <div className="overlay" onClick={closePopup}></div>
           <div className="popup-container">
