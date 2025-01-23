@@ -30,7 +30,7 @@ const BusinessCard = () => {
 
           .popup-container {
             position: fixed;
-            top: 35%;
+            top: 45%;
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 10px 10px 20px 20px;
