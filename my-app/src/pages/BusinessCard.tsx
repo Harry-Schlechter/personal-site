@@ -1,5 +1,4 @@
 import logo from "./mainlogo.png";
-import React, { useState } from "react";
 import { FaGithub, FaFileAlt, FaLinkedin, FaEnvelope, FaAngleRight } from "react-icons/fa";
 import TypewriterEffect from "./typed";
 import { Link, useNavigate } from "react-router-dom";
