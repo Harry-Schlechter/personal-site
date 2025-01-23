@@ -128,7 +128,7 @@ const Experience: React.FC = () => {
             <div className="linkBox">
                 <Link to="/projects"><FaAngleRight size={30} color="white"/>
                         <p className="linkT">Projects</p></Link>
-                </div>
+            </div>
         </div>
     )
 };

@@ -6,14 +6,12 @@ import { FaBars } from 'react-icons/fa';
 import resumeLink from './ResumeLink';
 
 const Navbar: React.FC = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
-     const [isNavOpen, setIsNavOpen] = useState(false);
-     const navRef = useRef<HTMLDivElement>(null);
-
-    const toggleNav = () => {
-        setIsNavOpen(!isNavOpen);
-    };
-
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
 
   // Function to close navbar when clicked outside
   const handleClickOutside = (event: { target: any; }) => {
@@ -34,30 +32,46 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-    return (
-        <nav className="navbar" ref={navRef}>
-            <div>
-             <Link to="/"><img src={logo} alt="logo"className="logo" /></Link>
-             </div>
-             <div className="toggle-button" onClick={toggleNav}>
-               <FaBars/>
-            </div>
-            <ul className={`navbar-links ${isNavOpen ? 'active' : ''}`}>
-                <li className="under">
-                    <Link to="/about">About</Link>
-                </li>
-                <li className="under">
-                    <Link to="/experience">Experience</Link>
-                </li>
-                <li className="under">
-                    <Link to="/projects">Projects</Link>
-                </li>
-                <li className="under">
-                    <Link to={resumeLink}>Resume</Link>
-                </li>
-            </ul>
-        </nav>
-    );
+  // Function to close nav on link click
+  const handleLinkClick = () => {
+    setIsNavOpen(false);
+  };
+
+  return (
+    <nav className="navbar" ref={navRef}>
+      <div>
+        <Link to="/" onClick={handleLinkClick}>
+          <img src={logo} alt="logo" className="logo" />
+        </Link>
+      </div>
+      <div className="toggle-button" onClick={toggleNav}>
+        <FaBars />
+      </div>
+      <ul className={`navbar-links ${isNavOpen ? 'active' : ''}`}>
+        <li className="under">
+          <Link to="/about" onClick={handleLinkClick}>
+            About
+          </Link>
+        </li>
+        <li className="under">
+          <Link to="/experience" onClick={handleLinkClick}>
+            Experience
+          </Link>
+        </li>
+        <li className="under">
+          <Link to="/projects" onClick={handleLinkClick}>
+            Projects
+          </Link>
+        </li>
+        <li className="under">
+          <Link to={resumeLink} onClick={handleLinkClick}>
+            Resume
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
 };
+
 
 export default Navbar;

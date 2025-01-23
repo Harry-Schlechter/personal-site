@@ -4,6 +4,7 @@
     background-color: #021526;
     padding: 2rem;
     padding-left: 12px;
+    z-index:2000;
 }
 .navbar-links {
     list-style: none;
