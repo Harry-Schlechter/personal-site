@@ -62,7 +62,7 @@ const TypewriterEffect: React.FC = () => {
   
 
   return (
-    <div style={{ fontFamily: 'monospace', fontSize: '24px', margin: '20px', color: 'white' }}>
+    <div style={{ fontFamily: 'monospace', fontSize: '20px', margin: '20px', color: 'white' }}>
       <div style={{ whiteSpace: 'pre-line' }}>{text}</div>
       {isTypingComplete && (
         <button
