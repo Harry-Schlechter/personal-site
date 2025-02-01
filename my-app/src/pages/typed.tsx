@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 
 const TypewriterEffect: React.FC = () => {
   const [text, setText] = useState(''); // State for the current text
   const [isTypingComplete, setIsTypingComplete] = useState(false); // State for typing completion
-  const fullText = 'It was great meeting you!\nPress the button below to save my contact information'; // Full text to display
+  const fullText = 'It was great meeting you!\nPlease connect with me and explore my website to learn more about me!'; // Full text to display
   const typingSpeed = 100; // Typing speed in milliseconds
 
   useEffect(() => {
@@ -34,27 +35,31 @@ const TypewriterEffect: React.FC = () => {
     };
   }, [fullText, typingSpeed]);
 
-  const saveContactToVCard = () => {
-    // Correctly formatted vCard content
-    const vCardData = `
-  BEGIN:VCARD
-  VERSION:3.0
-  FN:Harry Schlechter
-  TEL:516-816-9670
-  EMAIL:harry.schlechter391@gmail.com
-  ORG:BNY | HealFast
-  END:VCARD
-    `.trim(); // Trim leading/trailing whitespace to avoid issues
+  const connect = () => {
+      window.location.href = "https://www.linkedin.com/in/harryschlechter/";
+    }
+
+
+  // const saveContactToVCard = () => {
+  //   // Correctly formatted vCard content
+  //   const vCardData = `
+  //     BEGIN:VCARD
+  //     VERSION:4.0
+  //     FN:Harry Schlechter
+  //     TEL:516-816-9670
+  //     EMAIL:harry.schlechter391@gmail.com
+  //     END:VCARD
+  //       `
   
-    // Create a Blob with vCard data
-    const blob = new Blob([vCardData], { type: 'text/vcard' });
-  
-    // Create an invisible link to trigger the download
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'Harry_Schlechter.vcf';
-    link.click();
-  };
+  //   // Create a Blob with vCard data
+  //   const blob = new Blob([vCardData], { type: 'text/vcard' });
+  //   let url = URL.createObjectURL(blob);
+  //   const link = document.createElement('a');
+  //   link.download = 'Harry_Schlechter.vcf';
+  //   link.textContent = "Harry Schlechter";
+  //   link.href = url;
+  //   link.click();
+  // };
   
 
   return (
@@ -72,9 +77,9 @@ const TypewriterEffect: React.FC = () => {
             borderRadius: '5px',
             cursor: 'pointer',
           }}
-          onClick={saveContactToVCard}
+          onClick={connect}
         >
-          Save Contact
+          Connect
         </button>
       )}
     </div>
