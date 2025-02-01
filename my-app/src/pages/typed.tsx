@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
 
 const TypewriterEffect: React.FC = () => {
   const [text, setText] = useState(''); // State for the current text
