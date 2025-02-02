@@ -97,7 +97,8 @@ const About: React.FC = () => {
                 </ul>
             <div className="aboutInfo">
             <h2 className='skillT'>A Bit About Me</h2>
-            <p>Hello, my name is Harry Schlechter and I am a software engineer, entrepreneur, creator, life-long learner, and more.
+            <p>Hello, my name is Harry Schlechter and I am a software engineer, entrepreneur, creator, life-long learner, and more. I am passionate about mental health, and hope to to work at the intersection of technology and mental health.
+                I want to make a positive impact on the world and leverage technology to improve mental health and wellness.</p><br></br><p>
                    I am currently working as a back-end software engineer at BNY on their global payment engine. In my free time I work part-time as a full-stack engineer 
                    for a fast-growing startup, HealFast. I graduated summa cum laude from
                    the University of Pittsburgh's David C. Frederick Honors College with a Bachelor of Science in both computer science and psychology.
