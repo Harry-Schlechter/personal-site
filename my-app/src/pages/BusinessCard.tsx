@@ -120,7 +120,7 @@ const BusinessCard = () => {
             flex-direction: row;
             justify-content: center;
             margin-top: 10px;
-            margin-left: -10px;
+            margin-left: -40px;
           }
 
           .icon-circle {
@@ -185,7 +185,8 @@ const BusinessCard = () => {
                     </td>
                     <td>
                       <h2>Harry Schlechter</h2>
-                      <em>Software Engineer • BNY | HealFast</em>
+                      <em>Application Engineer</em><br></br>
+                      <em>Trinity Life Sciences | NYC</em>
                       <hr
                         style={{
                           border: "0",
@@ -194,11 +195,13 @@ const BusinessCard = () => {
                         }}
                       />
                       <div>
-                        <p>
-                          <a href="sms:+15168169670">516-816-9670</a>
+                        <p style={{
+                          marginLeft: "-20px",
+                        }}>
+                          <a href="sms:+15168169670">• 516-816-9670</a>
                           <br />
                           <a href="mailto:harry.schlechter391@gmail.com">
-                            harry.schlechter391@gmail.com
+                          • harry.schlechter391@gmail.com
                           </a>
                         </p>
                       </div>

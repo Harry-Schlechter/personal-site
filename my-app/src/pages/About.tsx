@@ -25,11 +25,10 @@ const About: React.FC = () => {
                 </div>
                 <div className="info">
 
-                    <p>🖥️ Software Engineer at BNY</p>
+                    <p>🖥️ Applicaiton Engineer at Trinity Life Sciences</p>
                     <p>🏫 University of Pittsburgh Honors College</p>
                     <p>📚 B.S. Computer Science & Psychology</p>
-                    <p>📍 Pittsburgh, PA</p>
-                    <p>🏠 Floral Park, NY</p>
+                    <p>🏠 New York, NY</p>
                     <p>📞 (516)816-9670</p>
                 </div>
             </div>
@@ -98,21 +97,18 @@ const About: React.FC = () => {
             <div className="aboutInfo">
             <h2 className='skillT'>A Bit About Me</h2>
             <p>Hello, my name is Harry Schlechter and I am a software engineer, entrepreneur, creator, life-long learner, and more.
-                   I am currently working as a back-end software engineer at BNY on their global payment engine. In my free time I work part-time as a full-stack engineer 
-                   for a fast-growing startup, HealFast. I graduated summa cum laude from
-                   the University of Pittsburgh's David C. Frederick Honors College with a Bachelor of Science in both computer science and psychology.
-                   My psychology background gives me a unique perspective as a developer allowing me to more effectively recognize consumer and customer
-                    needs, interact with others, and one day excel in a management position. I have a diverse background of full-stack development experience and skills I have acquired
-                    in various roles and personal projects, which you can see on this site!</p><br></br>
-                    <p>
-                    On a personal note, I live in Pittsburgh, PA, and have lived here since I moved to college. I may
-                    have been here for a few years, but I always love to hear new recommendations and try new things! I grew up in Floral Park, NY
-                    very close to New York City, and hope to move back in the future. In my free time, I like to cook, play pick-up basketball and soccer, run,
-                    play poker, go to hockey games, read, and more. I like to keep myself and my mind active.</p><br></br>
-                    <p>
-                    I love meeting and talking with new people so feel free to connect with me or contact me! 
-                                                                                                                                                                                                                                                                               
-                    </p>
+                  I am currently working as an application engineer at Trinity Life Sciences. I work as a full-stack engineer using React.js, Node.js, Typescript, and more. I have past experience working for a large bank, BNY, and a small health products startup, HealFast, Inc. I graduated summa cum laude from
+                  the University of Pittsburgh's David C. Frederick Honors College with a Bachelor of Science in both computer science and psychology.
+                  My psychology background gives me a unique perspective as a developer allowing me to more effectively recognize consumer and customer
+                   needs, interact with others, and one day excel in a management position. I have a diverse background of full-stack development experience and skills I have acquired
+                   in various roles and personal projects, which you can see on this site!</p><br></br>
+                   <p>
+                   On a personal note, I live in Floral Park, NY and work in Lower Manhattan. 
+In my free time, I like to cook, try new restaurants, play pick-up basketball and soccer, run, play poker, go to hockey games, read, and more. I like to keep myself and my mind active.</p><br></br>
+                   <p>
+                   I love meeting and talking with new people so feel free to connect with me or contact me! Always down to have a bite and a great conversation after work!
+                                                                                                                                                                                                                                                                             
+                   </p>
             </div>
             
                 <div className="linkBox">

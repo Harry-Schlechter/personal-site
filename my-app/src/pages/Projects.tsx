@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import flag from './flag.webp'
+// import flag from './flag.webp'
 import emp from './emp.webp'
 import heart from './hearts2.png'
 import grocy from './grocy.webp'
@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
             <div className="expBoxTop">
                 <h1 className="expTitle">Featured Projects</h1>
             </div>
-            <div className="expBox">
+            {/* <div className="expBox">
                 <div className="topBox">
                     <img src={flag} alt="bny" className="compLogo"></img>
                     <h2 className="compTitle">RedFlag</h2>
@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
                         <li>Next.js | Supabase | Vercell | React.js | Postgres</li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
             <div className="expBox">
                 <div className="topBox">
                     <img src={emp} alt="bny"  className="compLogo"></img>
