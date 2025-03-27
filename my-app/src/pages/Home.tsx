@@ -23,7 +23,7 @@ const Home: React.FC = () => {
             </div>
             <h1>Harry Schlechter</h1>
             <hr></hr>
-            <h2 className="bio">Software engineer with a diverse background in full-stack development and a B.S. in Computer Science and Psychology</h2>
+            <h2 className="bio">Software engineer with a diverse background in full-stack development, a B.S. in Computer Science & Psychology, and a passion for science, healthcare, and helping others</h2>
             <button className="learn" onClick={about}>Learn More</button>
         </div>
     )

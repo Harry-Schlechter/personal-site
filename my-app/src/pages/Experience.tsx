@@ -23,7 +23,7 @@ const Experience: React.FC = () => {
                 <div className="topBox">
                     <img src={tls} alt="bny"className="compLogo"></img>
                     <h2 className="compTitle">Trinity Life Sciences</h2>
-                    <p className="date">4/25-pres</p>
+                    <p className="date">04/25-pres</p>
                 </div>
                 <div className="midBox">
                     <h2 className="compRole">Application Engineer</h2>
