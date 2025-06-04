@@ -178,9 +178,9 @@ const BusinessCard = () => {
               <table className="business-card-table">
                 <tbody>
                   <tr>
-                    <td style={{ textAlign: "center" }}>
+                    <td style={{ textAlign: "center"}}>
                       <a href="https://harryschlechter.netlify.app/">
-                        <img src={logo} alt="Logo" />
+                        <img style={{marginTop: "-80px" }}src={logo} alt="Logo" />
                       </a>
                     </td>
                     <td>
@@ -200,7 +200,7 @@ const BusinessCard = () => {
                         }}>
                           <a href="sms:+15168169670">• 516-816-9670</a>
                           <br />
-                          <a href="mailto:harry.schlechter391@gmail.com">
+                          <a href="mailto:harry.schlechter391@gmail.com" style={{whiteSpace: 'nowrap'}}>
                           • harry.schlechter391@gmail.com
                           </a>
                         </p>

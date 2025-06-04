@@ -32,7 +32,6 @@
 }
 .topBox{
     display:flex;
-    
 }
 
 .compRole {
@@ -96,6 +95,7 @@
     .compTitle {
         font-size: x-large;
         margin-left: 10px;
+        flex: 1; /* Allow the title to take up available space */
     }
     .compRole {
         font-style: italic;
@@ -103,7 +103,19 @@
     }
     .linkBoxProj2{
         margin-left: auto;
-        
-        
+    }
+    .midBox{
+        margin-top:5px;
+    }
+    .topBox{
+        display:flex;
+        align-items: center;
+        justify-content: space-between; /* Space out elements: logo/title on the left, date on the right */
+        flex-wrap: nowrap; 
+    }
+    .date {
+        margin-left: 10px; /* Add spacing between title and date */
+        white-space: nowrap; /* Prevent the date from breaking into multiple lines */
+        text-align: right;
     }
 }

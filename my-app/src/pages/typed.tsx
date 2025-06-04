@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaLinkedin } from 'react-icons/fa';
 
 const TypewriterEffect: React.FC = () => {
   const [text, setText] = useState(''); // State for the current text
@@ -62,7 +63,7 @@ const TypewriterEffect: React.FC = () => {
   
 
   return (
-    <div style={{ fontFamily: 'monospace', fontSize: '20px', margin: '20px', color: 'white' }}>
+    <div style={{ fontSize: '20px', margin: '20px', color: 'white' }}>
       <div style={{ whiteSpace: 'pre-line' }}>{text}</div>
       {isTypingComplete && (
         <button

@@ -1,7 +1,7 @@
 
 .info {
     color: black;
-    margin-top:7px;
+    margin-top:15px;
     font-weight: 600;
     font-size: large;
     margin-left:30px;
@@ -49,13 +49,15 @@
 
 .aboutButtons{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Center the child elements */
+    align-items: center;
+
     border-radius: 10px;
+    margin: 0 auto; /* Center the entire div horizontally */
     margin-bottom: 25px;
-    width: 80%;
-    max-width:708.75px;
-
-
+    width: 100%;
+    max-width: 708.75px; /* Ensure consistent max width */
+    padding: 0;
 }
 
 .pic{
@@ -163,11 +165,18 @@ a{
 
 
 @media (max-width: 600px) {
-.info {
-    color: black;
-    margin-top:7px;
-    font-weight: 500;
-    font-size: medium;
-    margin-left:30px;
-}
+    .info {
+        color: black;
+        margin-top:7px;
+        font-weight: 500;
+        font-size: medium;
+        margin-left:10px;
+        font-weight: 600;
+    }
+    .left {
+        display:none;
+    }
+    .aboutButtons {
+        justify-content: center;
+    }
 }

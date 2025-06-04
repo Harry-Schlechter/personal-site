@@ -32,12 +32,14 @@ hr {
 .learn {
     color: white;
     background-color: #6EACDA;
-    padding: 10px;
+    padding: 20px;
     width: 28%;
     border-radius: 10px;
     font-size:x-large;
     cursor: pointer;
     animation: bounce 5s ease;
+    white-space: nowrap;
+    min-width: 125px;
 }
 
 button:hover {
