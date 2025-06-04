@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FaLinkedin } from 'react-icons/fa';
 
 const TypewriterEffect: React.FC = () => {
   const [text, setText] = useState(''); // State for the current text
