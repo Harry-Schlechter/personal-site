@@ -31,7 +31,7 @@
     width: 80%;
     max-width:708.75px;
     min-width: 375px;
-    border-style: outset;
+    /* border-style: outset; */
     margin-bottom: 30px;
 }
 
@@ -43,7 +43,7 @@
     width: 80%;
     max-width:708.75px;
     min-width: 375px;
-    border-style: outset;
+    /* border-style: outset; */
     /* line-height: 2;  */
 }
 
@@ -124,7 +124,7 @@ a{
     max-width:708.75px;
     min-width: 375px;
     margin-bottom: 20px;
-    border-style: outset;
+    /* border-style: outset; */
     /* letter-spacing: 1px; */
     line-height: 2; 
 }

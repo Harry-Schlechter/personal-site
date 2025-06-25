@@ -18,7 +18,7 @@
     max-width:708.75px;
     min-width: 375px;
     margin-bottom: 25px;
-    border-style: outset;
+    /* border-style: outset; */
 }
 
 .compLogo{

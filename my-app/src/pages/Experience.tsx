@@ -28,13 +28,11 @@ const Experience: React.FC = () => {
                 <div className="midBox">
                     <h2 className="compRole">Application Engineer</h2>
                 </div>
-                {/* <div className="botBox">
+                <div className="botBox">
                     <ul>
-                        <li>Back-End engineer for global payment engine using Java Spring Boot</li>
-                        <li>Helped increase traffic from legacy engine to modern payment engine by enhacing payment repair process. This allows transactions to be manually fixed and stay within modern engine</li>
-                        <li>Achieved 80%+ coverage on all new code developed by writing unit tests using JUnit and Mockito</li>
+                        <li>Building cutting edge AI life science applications as a full-stack engineer using React, Node, Typescript, Postgres, and more</li>
                     </ul>
-                </div> */}
+                </div>
             </div>
             <div className="expBox">
                 <div className="topBox">
