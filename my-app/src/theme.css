@@ -1,0 +1,246 @@
+/* Global theme overrides for business mode */
+
+/* Business theme - Green color scheme */
+.business-theme {
+    --primary-color: #03C988;
+    --primary-dark: #02a06d;
+    --primary-light: #04e09d;
+    --primary-glow: rgba(3, 201, 136, 0.4);
+    --primary-glow-strong: rgba(3, 201, 136, 0.6);
+}
+
+/* Personal theme - Blue color scheme */
+.personal-theme {
+    --primary-color: #6EACDA;
+    --primary-dark: #5a8fb8;
+    --primary-light: #85c0e8;
+    --primary-glow: rgba(110, 172, 218, 0.4);
+    --primary-glow-strong: rgba(110, 172, 218, 0.6);
+}
+
+/* Button overrides for business mode */
+.business-theme .cta-primary,
+.business-theme button:not(.mode-toggle) {
+    background: linear-gradient(135deg, #03C988 0%, #02a06d 100%) !important;
+    box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4) !important;
+}
+
+.business-theme .cta-primary:hover,
+.business-theme button:not(.mode-toggle):hover {
+    background: linear-gradient(135deg, #04e09d 0%, #03C988 100%) !important;
+    box-shadow: 0 12px 35px rgba(3, 201, 136, 0.6) !important;
+}
+
+.business-theme .cta-secondary {
+    border: 2px solid #03C988 !important;
+}
+
+.business-theme .cta-secondary:hover {
+    background: rgba(3, 201, 136, 0.1) !important;
+}
+
+/* Service cards and content cards */
+.business-theme .service-card {
+    border: 1px solid rgba(3, 201, 136, 0.2) !important;
+}
+
+.business-theme .service-card:hover {
+    border-color: rgba(3, 201, 136, 0.6) !important;
+    box-shadow: 0 12px 40px rgba(3, 201, 136, 0.3) !important;
+}
+
+.business-theme .service-icon {
+    color: #03C988 !important;
+}
+
+/* Why cards */
+.business-theme .why-card {
+    background: linear-gradient(135deg, rgba(3, 201, 136, 0.2) 0%, rgba(2, 160, 109, 0.2) 100%) !important;
+    border: 2px solid rgba(3, 201, 136, 0.3) !important;
+}
+
+.business-theme .why-card:hover {
+    border-color: rgba(3, 201, 136, 0.6) !important;
+}
+
+.business-theme .why-card h3 {
+    color: #03C988 !important;
+}
+
+/* Work items and portfolio items */
+.business-theme .work-item {
+    border: 2px solid #03C988 !important;
+}
+
+.business-theme .work-item:hover {
+    background: rgba(3, 201, 136, 0.1) !important;
+}
+
+.business-theme .work-link {
+    color: #03C988 !important;
+}
+
+/* Links */
+.business-theme a:not(.mode-toggle a) {
+    color: #03C988 !important;
+}
+
+.business-theme a:not(.mode-toggle a):hover {
+    color: #04e09d !important;
+}
+
+/* Badges and labels */
+.business-theme .hero-badge,
+.business-theme .badge {
+    background: linear-gradient(135deg, rgba(3, 201, 136, 0.15) 0%, rgba(2, 160, 109, 0.15) 100%) !important;
+    border: 1px solid rgba(3, 201, 136, 0.3) !important;
+}
+
+/* Icons */
+.business-theme .FaCode,
+.business-theme .FaMobile,
+.business-theme .FaRocket,
+.business-theme .FaPalette,
+.business-theme svg {
+    color: #03C988 !important;
+}
+
+/* Glowing effects */
+.business-theme .image-container {
+    box-shadow: 
+        0 0 40px rgba(3, 201, 136, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Progress bars, timelines, etc */
+.business-theme .progress-bar,
+.business-theme .timeline-marker {
+    background: #03C988 !important;
+}
+
+/* Hover effects for underlines */
+.business-theme .under::after {
+    background-color: #03C988 !important;
+}
+
+/* Section titles */
+.business-theme .section-title {
+    background: linear-gradient(135deg, #03C988 0%, #ffffff 50%, #03C988 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}
+
+/* CTA Large button */
+.business-theme .cta-large {
+    background: linear-gradient(135deg, #03C988 0%, #02a06d 100%) !important;
+    box-shadow: 0 10px 30px rgba(3, 201, 136, 0.4) !important;
+}
+
+.business-theme .cta-large:hover {
+    background: linear-gradient(135deg, #04e09d 0%, #03C988 100%) !important;
+    box-shadow: 0 15px 40px rgba(3, 201, 136, 0.6) !important;
+}
+
+/* View portfolio button */
+.business-theme .view-portfolio-btn {
+    background: linear-gradient(135deg, #03C988 0%, #02a06d 100%) !important;
+}
+
+/* Services page specific */
+.business-theme .service-details-card {
+    border: 2px solid rgba(3, 201, 136, 0.3) !important;
+}
+
+.business-theme .process-step {
+    border-left: 3px solid #03C988 !important;
+}
+
+.business-theme .process-number {
+    background: #03C988 !important;
+}
+
+/* Portfolio page specific */
+.business-theme .project-card {
+    border: 2px solid rgba(3, 201, 136, 0.2) !important;
+}
+
+.business-theme .project-card:hover {
+    border-color: rgba(3, 201, 136, 0.6) !important;
+    box-shadow: 0 12px 40px rgba(3, 201, 136, 0.3) !important;
+}
+
+.business-theme .capability-item svg {
+    color: #03C988 !important;
+}
+
+.business-theme .stat-value {
+    color: #03C988 !important;
+}
+
+/* Pricing page specific */
+.business-theme .pricing-card {
+    border: 2px solid rgba(3, 201, 136, 0.2) !important;
+}
+
+.business-theme .pricing-card.featured {
+    border: 3px solid #03C988 !important;
+    box-shadow: 0 15px 50px rgba(3, 201, 136, 0.4) !important;
+}
+
+.business-theme .price {
+    color: #03C988 !important;
+}
+
+.business-theme .addon-card {
+    border: 1px solid rgba(3, 201, 136, 0.2) !important;
+}
+
+.business-theme .addon-card:hover {
+    border-color: rgba(3, 201, 136, 0.5) !important;
+}
+
+/* Contact page specific */
+.business-theme .contact-method {
+    border: 2px solid rgba(3, 201, 136, 0.2) !important;
+}
+
+.business-theme .contact-method:hover {
+    border-color: rgba(3, 201, 136, 0.5) !important;
+    background: rgba(3, 201, 136, 0.05) !important;
+}
+
+.business-theme input:focus,
+.business-theme textarea:focus,
+.business-theme select:focus {
+    border-color: #03C988 !important;
+    box-shadow: 0 0 0 3px rgba(3, 201, 136, 0.1) !important;
+}
+
+.business-theme .submit-btn {
+    background: linear-gradient(135deg, #03C988 0%, #02a06d 100%) !important;
+    box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4) !important;
+}
+
+.business-theme .submit-btn:hover {
+    background: linear-gradient(135deg, #04e09d 0%, #03C988 100%) !important;
+    box-shadow: 0 12px 35px rgba(3, 201, 136, 0.6) !important;
+}
+
+/* FAQ and accordion items */
+.business-theme .faq-item {
+    border: 1px solid rgba(3, 201, 136, 0.2) !important;
+}
+
+.business-theme .faq-question:hover {
+    background: rgba(3, 201, 136, 0.05) !important;
+}
+
+/* Footer in business mode */
+.business-theme footer a:hover {
+    color: #03C988 !important;
+}
+
+.business-theme .social-icon:hover {
+    color: #03C988 !important;
+    border-color: #03C988 !important;
+}

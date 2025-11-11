@@ -1,0 +1,897 @@
+/* ===== PRICING PAGE STYLES ===== */
+
+.pricing-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #021526 0%, #03346E 50%, #021526 100%);
+  color: white;
+}
+
+/* Hero Section */
+.pricing-hero {
+  padding: 120px 20px 80px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(3, 52, 110, 0.5) 0%, transparent 100%);
+}
+
+.pricing-main-title {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #6EACDA 0%, #ffffff 50%, #6EACDA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+  background-size: 200% auto;
+}
+
+.pricing-hero-subtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+/* Tiers Section */
+.tiers-section {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #6EACDA 0%, #ffffff 50%, #6EACDA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 50px;
+}
+
+/* Card View Toggle */
+.card-view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0 40px;
+}
+
+.card-toggle-btn {
+  padding: 12px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.3);
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-toggle-btn:hover {
+  border-color: rgba(110, 172, 218, 0.6);
+  background: rgba(110, 172, 218, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-toggle-btn.active {
+  background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+  border-color: #6EACDA;
+  box-shadow: 0 8px 25px rgba(110, 172, 218, 0.4);
+}
+
+/* Tier Cards Grid */
+.tier-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tier-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.2);
+  border-radius: 20px;
+  padding: 35px 25px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.tier-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(110, 172, 218, 0.6);
+  box-shadow: 0 20px 60px rgba(110, 172, 218, 0.3);
+}
+
+.tier-card.selected {
+  border-color: #6EACDA;
+  box-shadow: 0 20px 60px rgba(110, 172, 218, 0.4);
+  background: rgba(110, 172, 218, 0.1);
+}
+
+.tier-card.popular {
+  border-color: #6EACDA;
+  border-width: 3px;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 25px rgba(110, 172, 218, 0.4);
+}
+
+.tier-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #6EACDA;
+}
+
+.tier-pricing {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.build-price {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.monthly-price, .monthly-price-custom {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.price-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.tier-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.check-icon {
+  color: #6EACDA;
+  font-size: 16px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.zero-down-bonus {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(110, 172, 218, 0.1);
+  border-left: 3px solid #6EACDA;
+  border-radius: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.zero-down-bonus strong {
+  color: #6EACDA;
+}
+
+/* Calculator Section */
+.calculator-section {
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.calculator-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.3);
+  border-radius: 30px;
+  padding: 50px 40px;
+  backdrop-filter: blur(10px);
+}
+
+/* Price Display */
+.price-display {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin: 40px 0;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  border: 2px solid rgba(110, 172, 218, 0.2);
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-item .price-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.price-value {
+  font-size: 38px;
+  font-weight: 700;
+  color: white;
+}
+
+.price-highlight {
+  color: #6EACDA;
+  text-shadow: 0 0 20px rgba(110, 172, 218, 0.5);
+}
+
+/* Calculator Options */
+.calculator-option {
+  margin-bottom: 40px;
+}
+
+.option-label {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #6EACDA;
+}
+
+/* Plan Selector */
+.plan-selector {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.plan-selector-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.3);
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-selector-btn:hover {
+  border-color: rgba(110, 172, 218, 0.6);
+  background: rgba(110, 172, 218, 0.1);
+}
+
+.plan-selector-btn.active {
+  background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+  border-color: #6EACDA;
+  box-shadow: 0 8px 25px rgba(110, 172, 218, 0.4);
+}
+
+/* Features Dropdown */
+.features-dropdown-container {
+  margin-top: 20px;
+}
+
+.features-dropdown-toggle {
+  width: 100%;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(110, 172, 218, 0.2);
+  border-radius: 12px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.features-dropdown-toggle:hover {
+  border-color: rgba(110, 172, 218, 0.5);
+  background: rgba(110, 172, 218, 0.05);
+}
+
+.features-dropdown-toggle svg {
+  color: #6EACDA;
+  transition: transform 0.3s ease;
+}
+
+.features-dropdown-content {
+  margin-top: 15px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(110, 172, 218, 0.2);
+  border-radius: 12px;
+  animation: dropdownSlide 0.3s ease-out;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.features-list li:last-child {
+  margin-bottom: 0;
+}
+
+.feature-check {
+  color: #6EACDA;
+  font-size: 14px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.bonus-info {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(110, 172, 218, 0.1);
+  border-left: 3px solid #6EACDA;
+  border-radius: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.bonus-info strong {
+  color: #6EACDA;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Payment Toggle */
+.payment-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.toggle-btn {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.3);
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.toggle-btn:hover {
+  border-color: rgba(110, 172, 218, 0.6);
+  background: rgba(110, 172, 218, 0.1);
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+  border-color: #6EACDA;
+  box-shadow: 0 8px 25px rgba(110, 172, 218, 0.4);
+}
+
+.toggle-desc {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.toggle-btn.active .toggle-desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Add-ons List */
+.addons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.addon-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.addon-item:hover {
+  border-color: rgba(110, 172, 218, 0.4);
+}
+
+.addon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+.addon-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.addon-checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #6EACDA;
+}
+
+.addon-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  flex: 1;
+}
+
+.addon-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #6EACDA;
+  margin-right: 15px;
+}
+
+.accordion-toggle {
+  background: none;
+  border: none;
+  color: #6EACDA;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.accordion-toggle:hover {
+  color: #85c0e8;
+  transform: scale(1.1);
+}
+
+.addon-description {
+  padding: 0 20px 20px 55px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.6;
+  border-top: 1px solid rgba(110, 172, 218, 0.1);
+  padding-top: 15px;
+  margin-top: 15px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Calculator CTA */
+.calculator-cta {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 18px 50px;
+  background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(110, 172, 218, 0.4);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #85c0e8 0%, #6EACDA 100%);
+  box-shadow: 0 12px 35px rgba(110, 172, 218, 0.6);
+  transform: translateY(-3px);
+}
+
+.cta-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cta-note a {
+  color: #6EACDA;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-note a:hover {
+  text-decoration: underline;
+}
+
+/* Enterprise CTA Section */
+.enterprise-cta-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.enterprise-cta-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.3);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.enterprise-cta-container h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #6EACDA;
+}
+
+.enterprise-cta-container p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Business Theme Green Overrides */
+.business-theme .pricing-main-title {
+  background: linear-gradient(135deg, #03C988 0%, #ffffff 50%, #03C988 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.business-theme .section-title {
+  background: linear-gradient(135deg, #03C988 0%, #ffffff 50%, #03C988 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.business-theme .card-toggle-btn {
+  border-color: rgba(3, 201, 136, 0.3);
+}
+
+.business-theme .card-toggle-btn:hover {
+  border-color: rgba(3, 201, 136, 0.6);
+  background: rgba(3, 201, 136, 0.1);
+}
+
+.business-theme .card-toggle-btn.active {
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+  border-color: #03C988;
+  box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .tier-card {
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .tier-card:hover,
+.business-theme .tier-card.selected {
+  border-color: #03C988;
+  box-shadow: 0 20px 60px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .tier-card.selected {
+  background: rgba(3, 201, 136, 0.1);
+}
+
+.business-theme .tier-card.popular {
+  border-color: #03C988;
+}
+
+.business-theme .popular-badge {
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+  box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .tier-name {
+  color: #03C988;
+}
+
+.business-theme .check-icon {
+  color: #03C988;
+}
+
+.business-theme .zero-down-bonus {
+  background: rgba(3, 201, 136, 0.1);
+  border-left-color: #03C988;
+}
+
+.business-theme .zero-down-bonus strong {
+  color: #03C988;
+}
+
+.business-theme .calculator-container {
+  border-color: rgba(3, 201, 136, 0.3);
+}
+
+.business-theme .price-display {
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .price-highlight {
+  color: #03C988;
+  text-shadow: 0 0 20px rgba(3, 201, 136, 0.5);
+}
+
+.business-theme .option-label {
+  color: #03C988;
+}
+
+.business-theme .plan-selector-btn {
+  border-color: rgba(3, 201, 136, 0.3);
+}
+
+.business-theme .plan-selector-btn:hover {
+  border-color: rgba(3, 201, 136, 0.6);
+  background: rgba(3, 201, 136, 0.1);
+}
+
+.business-theme .plan-selector-btn.active {
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+  border-color: #03C988;
+  box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .features-dropdown-toggle {
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .features-dropdown-toggle:hover {
+  border-color: rgba(3, 201, 136, 0.5);
+  background: rgba(3, 201, 136, 0.05);
+}
+
+.business-theme .features-dropdown-toggle svg {
+  color: #03C988;
+}
+
+.business-theme .features-dropdown-content {
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .feature-check {
+  color: #03C988;
+}
+
+.business-theme .bonus-info {
+  background: rgba(3, 201, 136, 0.1);
+  border-left-color: #03C988;
+}
+
+.business-theme .bonus-info strong {
+  color: #03C988;
+}
+
+.business-theme .toggle-btn {
+  border-color: rgba(3, 201, 136, 0.3);
+}
+
+.business-theme .toggle-btn:hover {
+  border-color: rgba(3, 201, 136, 0.6);
+  background: rgba(3, 201, 136, 0.1);
+}
+
+.business-theme .toggle-btn.active {
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+  border-color: #03C988;
+  box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .addon-item {
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .addon-item:hover {
+  border-color: rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .addon-checkbox-label input[type="checkbox"] {
+  accent-color: #03C988;
+}
+
+.business-theme .addon-price {
+  color: #03C988;
+}
+
+.business-theme .accordion-toggle {
+  color: #03C988;
+}
+
+.business-theme .accordion-toggle:hover {
+  color: #04e09d;
+}
+
+.business-theme .addon-description {
+  border-top-color: rgba(3, 201, 136, 0.1);
+}
+
+.business-theme .cta-button {
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+  box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .cta-button:hover {
+  background: linear-gradient(135deg, #04e09d 0%, #03C988 100%);
+  box-shadow: 0 12px 35px rgba(3, 201, 136, 0.6);
+}
+
+.business-theme .cta-note a {
+  color: #03C988;
+}
+
+.business-theme .enterprise-cta-container {
+  border-color: rgba(3, 201, 136, 0.3);
+}
+
+.business-theme .enterprise-cta-container h2 {
+  color: #03C988;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-main-title {
+    font-size: 42px;
+  }
+
+  .tier-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-container {
+    padding: 30px 20px;
+  }
+
+  .price-display {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .payment-toggle {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-selector {
+    flex-direction: column;
+  }
+
+  .price-value {
+    font-size: 32px;
+  }
+
+  .build-price {
+    font-size: 36px;
+  }
+
+  .addon-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .addon-description {
+    padding-left: 20px;
+  }
+
+  .card-view-toggle {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-toggle-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-main-title {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .tier-card {
+    padding: 25px 20px;
+  }
+
+  .build-price {
+    font-size: 32px;
+  }
+
+  .calculator-container {
+    padding: 25px 15px;
+  }
+
+  .cta-button {
+    padding: 15px 35px;
+    font-size: 16px;
+  }
+}

@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import emp from './emp.webp'
 import heart from './hearts2.png'
 import grocy from './grocy.webp'
+import rooster from './rooster.png'
 import { FaAngleRight, FaGithub,  FaGlobe} from 'react-icons/fa';
 import './Projects.css'
 import { Link } from 'react-router-dom';
@@ -18,6 +19,32 @@ const Projects: React.FC = () => {
         <div className="exp-container">
             <div className="expBoxTop">
                 <h1 className="expTitle">Featured Projects</h1>
+            </div>
+            <div className="expBox">
+                <div className="topBox">
+                    <img src={rooster} alt="boxrooster"  className="compLogo"></img>
+                    <h2 className="compTitle">Boxrooster</h2>
+                    <p className="date">10/2025</p>
+                </div>
+                <div className="botBox">
+                    <ul>
+                        <li>Mobile and web optimized site for local band</li>
+                        <li>Features responsive design and modern UI</li>
+                        <li>React.js | JavaScript | MUI | Netlify</li>
+                    </ul>
+                </div>
+                <div className='projLinks'>
+                    <div className="linkBoxProj">
+                        <a href="https://boxrooster.com">
+                            <FaGlobe size={30} color="black"/>
+                        </a>
+                    </div>
+                    <div className="linkBoxProj">
+                        <a href="https://github.com/Harry-Schlechter/boxrooster123">
+                            <FaGithub size={30} color="black"/>
+                        </a>
+                    </div>
+                </div>
             </div>
             {/* <div className="expBox">
                 <div className="topBox">

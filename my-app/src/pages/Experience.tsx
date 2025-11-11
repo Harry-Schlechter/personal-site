@@ -3,7 +3,7 @@ import bny from './bny.jpeg'
 import wabtec from './wabtec.jpeg'
 import pitt from './pittSCI.jpeg'
 import healfast from './healfast.jpeg'
-import tls from './TLS.jpeg'
+import tls from './TLS_new.jpeg'
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -26,11 +26,15 @@ const Experience: React.FC = () => {
                     <p className="date">04/25-pres</p>
                 </div>
                 <div className="midBox">
-                    <h2 className="compRole">Application Engineer</h2>
+                    <h2 className="compRole">Software Engineer III</h2>
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>Building cutting edge AI life science applications as a full-stack engineer using React, Node, Typescript, Postgres, and more</li>
+                        <li>Helped design and build an enterprise-grade GenAI chat platform leveraged by internal stakeholders and deployed to leading pharmaceutical and life sciences clients</li>
+                        <li>Developed a management app layer enabling highly customizable, enterprise-scale configuration of AI platform features, workflows, and data integrations, improving deployment speed and flexibility</li>
+                        <li>Implemented custom agent-to-agent communication protocols enabling the platform to coordinate with internal platforms</li>
+                        <li>Designed internal AI-agent in Microsoft Teams to automate support, cutting manual effort by over 90%</li>
+                        <li>Managed and mentored an engineering intern, providing code reviews and technical guidance</li>
                     </ul>
                 </div>
             </div>
@@ -45,9 +49,8 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>Back-End engineer for global payment engine using Java Spring Boot</li>
-                        <li>Helped increase traffic from legacy engine to modern payment engine by enhacing payment repair process. This allows transactions to be manually fixed and stay within modern engine</li>
-                        <li>Investigated and troubleshot unsuccessful payments in production</li>
+                        <li>Back-end engineer on next-gen global payment engine</li>
+                        <li>Improved transaction repair flow, reducing manual intervention across 1T+ daily payment volume</li>
                         <li>Achieved 80%+ coverage on all new code developed by writing unit tests using JUnit and Mockito</li>
                     </ul>
                 </div>
@@ -63,9 +66,10 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>Part-time software engineer for fast-growing health products startup in spare time</li>
-                        <li>Designed and built Google BigQuery database and automated upload of ad and order data</li>
-                        <li>Engineered new pages for online Shopify store</li>
+                        <li>Part-time software engineer for fast-growing health products startup</li>
+                        <li>Automated ingestion of marketing + order data into BigQuery for analytics</li>
+                        <li>Designed schema and ETL processes for unified revenue reporting</li>
+                        <li>Engineered new pages for company Shopify site</li>
                     </ul>
                 </div>
             </div>
@@ -80,30 +84,9 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>Collaborated on agile team for developing standalone UI for a payment platform using
-                        Angular and Java Spring Boot</li>
-                        <li>Created transaction cancellation capability within UI</li>
-                        <li>Implemented backend logic for cancellation of underlying payments</li>
-                        <li>Added validations for payments within UI for date, method of payment, etc.</li>
-                    </ul>
-                </div>
-            </div>
-            <div className="expBox">
-                <div className="topBox">
-                    <img src={wabtec} alt="wab" className="compLogo"></img>
-                    <h2 className="compTitle">Wabtec</h2>
-                    <p className="date">05/22-08/22</p>
-                </div>
-                <div className="midBox">
-                    <h2 className="compRole">Software Engineer Intern</h2>
-                </div>
-                <div className="botBox">
-                    <ul>
-                        <li>Constructed user interface for internal business application using Angular on an agile
-                        development team</li>
-                        <li>Developed machine learning model using Python to predict internal shipping costs for
-                        the upcoming quarter with 95% accuracy</li>
-                        <li>Modified Node.js API to optimize application performance</li>
+                        <li>Front-End engineer on new UI for next-gen global payment platform</li>
+                        <li>Built core Angular UI components for next-gen global payments platform used by enterprise clients</li>
+                        <li>Implemented real-time validation and transaction management features, reducing manual intervention in payment flow</li>
                     </ul>
                 </div>
             </div>
@@ -118,11 +101,25 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>Reduced response time from 10 minutes to 30 seconds for security operations including
-                        incident response and task creation in ServiceNow, playbook initiation, and Okta queries</li>
-                        <li>Created UI snippet to display in Microsoft Teams using JSON adaptive cards and
-                        leveraged power automate and SlunkSOAR/Python for SecOps team members to be able
-                        to execute security operations within a Microsoft Teams chat</li>
+                        <li>Reduced response time from 10 minutes to 30 seconds for security operations including incident response and task creation in ServiceNow, playbook initiation, and Okta queries</li>
+                        <li>Created UI snippet to display in Microsoft Teams using JSON adaptive cards and leveraged power automate and SplunkSOAR/Python for SecOps team members to be able to execute security operations within a Microsoft Teams chat</li>
+                    </ul>
+                </div>
+            </div>
+            <div className="expBox">
+                <div className="topBox">
+                    <img src={wabtec} alt="wab" className="compLogo"></img>
+                    <h2 className="compTitle">Wabtec</h2>
+                    <p className="date">05/22-08/22</p>
+                </div>
+                <div className="midBox">
+                    <h2 className="compRole">Software Engineer Intern</h2>
+                </div>
+                <div className="botBox">
+                    <ul>
+                        <li>Developed machine learning model using Python to predict internal shipping costs for the upcoming quarter with 95% accuracy</li>
+                        <li>Constructed and designed Angular UI and Node.js API for flat-screen factory displays and admin</li>
+                        <li>Served as head of operations committee for interns</li>
                     </ul>
                 </div>
             </div>

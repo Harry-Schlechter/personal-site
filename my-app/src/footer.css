@@ -1,36 +1,117 @@
-.copy {
-    color: white;
-    text-align: center;
-    font-size: large;
+/* Footer Container */
+.footer-container {
+    margin-top: 80px;
+    padding: 20px;
 }
 
-hr {
-    width: 80%;
-    margin-bottom:20px;
-    align-items: center;
-}
-a {
-    padding:20px;
-    align-items: center;
-}
-
+/* Social Container */
 .social-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px 10px;
 }
 
-.footer-container {
-    margin-top: 100px;
+/* Footer Links */
+.footLink {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
 }
-.footLink:hover{
-    transform: scale(1.25);
+
+.footLink:hover {
+    transform: translateY(-5px) scale(1.15);
 }
-.logo1{
+
+/* Logo */
+.logo1 {
     width: 60px; 
-    height: 60px;; 
+    height: 60px;
     border-radius: 10%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(110, 172, 218, 0.3);
 }
-.logo1:hover{
-    border-color: #6EACDA;
+
+.logo1:hover {
+    box-shadow: 0 8px 20px rgba(110, 172, 218, 0.6);
+    transform: scale(1.1);
+}
+
+/* Copyright */
+.copy {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Divider */
+hr {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, rgba(110, 172, 218, 0.5) 50%, transparent 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        margin-top: 60px;
+    }
+
+    .social-container {
+        gap: 10px;
+        padding: 15px 5px;
+    }
+
+    .footLink {
+        padding: 10px;
+    }
+
+    .logo1 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .copy {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        margin-top: 40px;
+    }
+
+    .social-container {
+        gap: 5px;
+        padding: 10px 5px;
+    }
+
+    .footLink {
+        padding: 8px;
+    }
+
+    .footLink svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo1 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .copy {
+        font-size: 12px;
+        padding: 15px 10px;
+    }
 }

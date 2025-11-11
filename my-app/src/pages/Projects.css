@@ -1,121 +1,398 @@
+/* Project Container */
+.exp-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title Section */
 .expBoxTop {
     padding: 20px;
     border-radius: 10px;
-    color: #6EACDA;
-}
-.expTitle {
-    color:white;
-    text-align: center;
-    font-size: xx-large;
-}
-.expBox {
-    background-color: #6EACDA;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width:708.75px;
-    min-width: 375px;
-    margin-bottom: 25px;
-    /* border-style: outset; */
+    margin-bottom: 30px;
 }
 
-.compLogo{
-    height: 40px;
-    width: 40px;
+.expTitle {
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6EACDA 0%, #ffffff 50%, #6EACDA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease-in-out infinite;
+    background-size: 200% auto;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+
+/* Project Box */
+.expBox {
+    background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    min-width: 320px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.expBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.expBox:hover::before {
+    opacity: 1;
+}
+
+.expBox:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Top Box */
+.topBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.compLogo {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.compLogo:hover {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .compTitle {
-    font-size: xx-large;
-    margin-left: 10px;
-}
-.topBox{
-    display:flex;
-}
-
-.compRole {
-    font-style: italic;
-    font-size: x-large;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 15px;
+    color: white;
+    flex: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .date {
     margin-left: auto;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
 }
 
-.exp-container{
-    justify-content: center;
-    align-items: center;
-    display:flex;
-    flex-direction: column;
+.compRole {
+    font-style: italic;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
 }
-.botBox{
-    margin-left:20px;
-    margin-top:8px;
+
+/* Bottom Box */
+.botBox {
+    margin-left: 10px;
+    margin-top: 10px;
 }
-.midBox{
-    margin-top:5px;
+
+.botBox ul {
+    color: white;
+    line-height: 1.8;
+    padding-left: 20px;
 }
-.skills{
-    list-style:none;
+
+.botBox li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+    padding-left: 10px;
 }
+
+.botBox li::marker {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.botBox li:hover {
+    transform: translateX(5px);
+    transition: transform 0.2s ease;
+}
+
+.midBox {
+    margin-top: 10px;
+}
+
+.skills {
+    list-style: none;
+}
+
 .skillDesc {
     text-align: center;
 }
-.skillT{
+
+.skillT {
     text-align: center;
     margin-bottom: 5px;
 }
-.linkBoxProj{
-    margin-bottom:-15px;
-}
-.linkBoxProj:hover{
-    transform: scale(1.25);
-}
 
-.projLinks{
-    display:flex;
+/* Project Links */
+.projLinks {
+    display: flex;
     justify-content: flex-end;
-    margin-left: auto;
-    margin-right: -25px;
-    margin-top:10px;
+    margin-top: 15px;
+    gap: 15px;
+    z-index: 1;
 }
 
+.linkBoxProj {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkBoxProj:hover {
+    transform: translateY(-3px) scale(1.15);
+}
+
+.linkBoxProj a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.linkBoxProj2 {
+    margin-left: auto;
+}
+
+/* Link Box (Resume link) */
+.linkBox {
+    background: linear-gradient(135deg, #03C988 0%, #02a06f 100%);
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+    transition: all 0.3s ease;
+}
+
+.linkBox:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(3, 201, 136, 0.6);
+}
+
+.linkBox a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.linkT {
+    color: white;
+}
+
+/* Thanks Section */
 .thanks {
     padding: 20px;
+    margin-top: 20px;
 }
+
 .thanksP {
-    color:white;
+    color: white;
     text-align: center;
-    font-size: medium;
+    font-size: 16px;
     font-style: italic;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .expTitle {
+        font-size: 32px;
+    }
+
+    .expBox {
+        width: 95%;
+        padding: 25px;
+        min-width: unset;
+    }
+
+    .compTitle {
+        font-size: 22px;
+    }
+
+    .date {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .linkBox {
+        padding: 12px 25px;
+    }
+
+    .linkBox a {
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 600px) {
     .compTitle {
-        font-size: x-large;
+        font-size: 20px;
         margin-left: 10px;
-        flex: 1; /* Allow the title to take up available space */
+        flex: 1;
     }
+
     .compRole {
         font-style: italic;
-        font-size: larger;
+        font-size: 18px;
     }
-    .linkBoxProj2{
+
+    .linkBoxProj2 {
         margin-left: auto;
     }
-    .midBox{
-        margin-top:5px;
+
+    .midBox {
+        margin-top: 5px;
     }
-    .topBox{
-        display:flex;
+
+    .topBox {
+        display: flex;
         align-items: center;
-        justify-content: space-between; /* Space out elements: logo/title on the left, date on the right */
-        flex-wrap: nowrap; 
+        justify-content: space-between;
+        flex-wrap: nowrap;
     }
+
     .date {
-        margin-left: 10px; /* Add spacing between title and date */
-        white-space: nowrap; /* Prevent the date from breaking into multiple lines */
+        margin-left: 10px;
+        white-space: nowrap;
         text-align: right;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .projLinks {
+        gap: 12px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp-container {
+        padding: 10px;
+    }
+
+    .expTitle {
+        font-size: 26px;
+    }
+
+    .expBox {
+        width: 100%;
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    .compLogo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .compTitle {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .botBox {
+        margin-left: 5px;
+    }
+
+    .botBox li {
+        font-size: 14px;
+    }
+
+    .projLinks {
+        gap: 10px;
+    }
+
+    .linkBox {
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+
+    .linkBox a {
+        font-size: 15px;
+    }
+
+    .thanksP {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .expBox {
+        padding: 15px;
+    }
+
+    .compTitle {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .botBox li {
+        font-size: 13px;
     }
 }

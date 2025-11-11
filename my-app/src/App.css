@@ -1,6 +1,65 @@
 .App {
   text-align: center;
   background-color: white;
+  position: relative;
+}
+
+/* Global color flow effect overlay */
+.App::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.App.pulse-blue::before {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(110, 172, 218, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(110, 172, 218, 0.3) 0%, transparent 50%);
+  animation: colorFlowOverlayBlue 2s ease-out;
+}
+
+.App.pulse-green::before {
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(3, 201, 136, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(3, 201, 136, 0.3) 0%, transparent 50%);
+  animation: colorFlowOverlayGreen 2s ease-out;
+}
+
+@keyframes colorFlowOverlayBlue {
+  0% {
+    opacity: 0;
+    background-position: -100% 50%, 200% 50%;
+  }
+  50% {
+    opacity: 0.8;
+    background-position: 50% 50%, 50% 50%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 200% 50%, -100% 50%;
+  }
+}
+
+@keyframes colorFlowOverlayGreen {
+  0% {
+    opacity: 0;
+    background-position: -100% 50%, 200% 50%;
+  }
+  50% {
+    opacity: 0.8;
+    background-position: 50% 50%, 50% 50%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 200% 50%, -100% 50%;
+  }
 }
 
 .navbar {
@@ -13,6 +72,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
+  transition: all 0.5s ease;
 } 
 
 .app-container {

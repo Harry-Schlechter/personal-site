@@ -1,0 +1,481 @@
+/* ===== TRAFFIC CONSULTING SECTION ===== */
+
+.traffic-consulting-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.consulting-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(110, 172, 218, 0.4);
+}
+
+.header-icon svg {
+  font-size: 32px;
+  color: white;
+}
+
+.consulting-title {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #6EACDA 0%, #ffffff 50%, #6EACDA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.consulting-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Tiers Grid */
+.consulting-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Tier Card */
+.consulting-tier-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.2);
+  border-radius: 20px;
+  padding: 30px 25px;
+  transition: all 0.4s ease;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.consulting-tier-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(110, 172, 218, 0.5);
+  box-shadow: 0 15px 40px rgba(110, 172, 218, 0.3);
+}
+
+.consulting-tier-card.selected {
+  border-color: #6EACDA;
+  box-shadow: 0 15px 40px rgba(110, 172, 218, 0.4);
+  background: rgba(110, 172, 218, 0.1);
+}
+
+.consulting-tier-card.recommended {
+  border-color: #6EACDA;
+  border-width: 3px;
+}
+
+.consulting-tier-card.included {
+  border-color: rgba(3, 201, 136, 0.5);
+  background: rgba(3, 201, 136, 0.05);
+}
+
+/* Badges */
+.recommended-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 8px 25px rgba(110, 172, 218, 0.4);
+}
+
+.included-badge {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+}
+
+/* Card Header */
+.tier-card-header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tier-card-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #6EACDA;
+  margin-bottom: 10px;
+}
+
+.tier-card-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.tier-card-price {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.price-strikethrough {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+}
+
+.price-free {
+  color: #03C988;
+  font-size: 32px;
+}
+
+.price-period {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.tier-card-frequency {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Description */
+.tier-card-description {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Accordion */
+.tier-accordion {
+  margin-bottom: 20px;
+}
+
+.accordion-toggle-btn {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.2);
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-toggle-btn:hover {
+  border-color: rgba(110, 172, 218, 0.5);
+  background: rgba(110, 172, 218, 0.1);
+}
+
+.accordion-toggle-btn svg {
+  color: #6EACDA;
+  font-size: 14px;
+}
+
+.accordion-content {
+  margin-top: 15px;
+  padding: 20px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(110, 172, 218, 0.2);
+  border-radius: 10px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tier-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tier-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.tier-features-list li:last-child {
+  margin-bottom: 0;
+}
+
+.feature-check-icon {
+  color: #6EACDA;
+  font-size: 14px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Selection */
+.tier-selection {
+  margin-top: 20px;
+}
+
+.selection-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(110, 172, 218, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.selection-checkbox:hover {
+  border-color: rgba(110, 172, 218, 0.6);
+  background: rgba(110, 172, 218, 0.1);
+}
+
+.selection-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #6EACDA;
+}
+
+.checkbox-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.selection-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #6EACDA 0%, #5a8fb8 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.selection-btn:hover {
+  background: linear-gradient(135deg, #85c0e8 0%, #6EACDA 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(110, 172, 218, 0.4);
+}
+
+.included-btn {
+  background: rgba(3, 201, 136, 0.2);
+  border: 2px solid #03C988;
+  cursor: default;
+  color: #03C988;
+}
+
+.included-btn:hover {
+  transform: none;
+  background: rgba(3, 201, 136, 0.2);
+  box-shadow: none;
+}
+
+/* Info Note */
+.consulting-info {
+  text-align: center;
+  padding: 20px;
+  background: rgba(110, 172, 218, 0.1);
+  border: 2px solid rgba(110, 172, 218, 0.2);
+  border-radius: 12px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.info-text strong {
+  color: #6EACDA;
+}
+
+/* Business Theme Green Overrides */
+.business-theme .header-icon {
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+  box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .consulting-title {
+  background: linear-gradient(135deg, #03C988 0%, #ffffff 50%, #03C988 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.business-theme .consulting-tier-card {
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .consulting-tier-card:hover {
+  border-color: rgba(3, 201, 136, 0.5);
+  box-shadow: 0 15px 40px rgba(3, 201, 136, 0.3);
+}
+
+.business-theme .consulting-tier-card.selected {
+  border-color: #03C988;
+  box-shadow: 0 15px 40px rgba(3, 201, 136, 0.4);
+  background: rgba(3, 201, 136, 0.1);
+}
+
+.business-theme .consulting-tier-card.recommended {
+  border-color: #03C988;
+}
+
+.business-theme .recommended-badge {
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+  box-shadow: 0 8px 25px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .tier-card-name {
+  color: #03C988;
+}
+
+.business-theme .accordion-toggle-btn {
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .accordion-toggle-btn:hover {
+  border-color: rgba(3, 201, 136, 0.5);
+  background: rgba(3, 201, 136, 0.1);
+}
+
+.business-theme .accordion-toggle-btn svg {
+  color: #03C988;
+}
+
+.business-theme .accordion-content {
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .feature-check-icon {
+  color: #03C988;
+}
+
+.business-theme .selection-checkbox {
+  border-color: rgba(3, 201, 136, 0.3);
+}
+
+.business-theme .selection-checkbox:hover {
+  border-color: rgba(3, 201, 136, 0.6);
+  background: rgba(3, 201, 136, 0.1);
+}
+
+.business-theme .selection-checkbox input[type="checkbox"] {
+  accent-color: #03C988;
+}
+
+.business-theme .selection-btn {
+  background: linear-gradient(135deg, #03C988 0%, #02a06d 100%);
+}
+
+.business-theme .selection-btn:hover {
+  background: linear-gradient(135deg, #04e09d 0%, #03C988 100%);
+  box-shadow: 0 8px 20px rgba(3, 201, 136, 0.4);
+}
+
+.business-theme .consulting-info {
+  background: rgba(3, 201, 136, 0.1);
+  border-color: rgba(3, 201, 136, 0.2);
+}
+
+.business-theme .info-text strong {
+  color: #03C988;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .consulting-title {
+    font-size: 32px;
+  }
+
+  .consulting-tiers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tier-card-price {
+    font-size: 32px;
+  }
+
+  .recommended-badge,
+  .included-badge {
+    position: static;
+    margin-bottom: 15px;
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .consulting-title {
+    font-size: 28px;
+  }
+
+  .consulting-tier-card {
+    padding: 25px 20px;
+  }
+
+  .tier-card-name {
+    font-size: 24px;
+  }
+
+  .tier-card-price {
+    font-size: 28px;
+  }
+}
