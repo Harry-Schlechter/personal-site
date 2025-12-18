@@ -30,11 +30,12 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>Helped design and build an enterprise-grade GenAI chat platform leveraged by internal stakeholders and deployed to leading pharmaceutical and life sciences clients</li>
-                        <li>Developed a management app layer enabling highly customizable, enterprise-scale configuration of AI platform features, workflows, and data integrations, improving deployment speed and flexibility</li>
-                        <li>Implemented custom agent-to-agent communication protocols enabling the platform to coordinate with internal platforms</li>
-                        <li>Designed internal AI-agent in Microsoft Teams to automate support, cutting manual effort by over 90%</li>
-                        <li>Managed and mentored an engineering intern, providing code reviews and technical guidance</li>
+                        <li>Designed and built an enterprise-grade GenAI chat platform leveraged by internal stakeholders and deployed to leading pharmaceutical and life sciences clients (React, Node.js, TypeScript, AWS)</li>
+                        <li>Embedded with a leading pharmaceutical client's technical team to support production deployment, stability, and ongoing operation of the platform, acting as a senior technical partner during rollout</li>
+                        <li>Developed a centralized management application enabling enterprise-scale configuration of AI agents, workflows, tools, and data integrations, improving deployment speed and flexibility</li>
+                        <li>Led architecture of custom agent-to-agent communication protocols, enabling the platform to coordinate with internal agentic backend servers</li>
+                        <li>Designed internal AI-agent in Microsoft Teams to automate support workflows to internal consultants, reducing manual effort by over 90%</li>
+                        <li>Managed and mentored an intern, providing technical guidance and architectural direction</li>
                     </ul>
                 </div>
             </div>
