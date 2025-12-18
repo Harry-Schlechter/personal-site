@@ -1,2 +1,2 @@
-const resumeLink = "https://drive.google.com/file/d/1mkUes1c6qU1Pzz_rg4IWQ7yqAWH5gRC9/view?usp=sharing";
+const resumeLink = "https://drive.google.com/file/d/1Be4i36zX0Fp2UjcGw6wBKXJ7vi6K3qrS/view?usp=sharing";
 export default resumeLink;
