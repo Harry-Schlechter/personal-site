@@ -106,7 +106,7 @@ const About: React.FC = () => {
                             <FaRocket size={40} />
                         </div>
                         <h3>Builder Mentality</h3>
-                        <p>I don't just write code at work — I build products on the side, contribute to open source, and stay deep in the latest AI tooling. Engineering is what I do, not just my job.</p>
+                        <p>I don't just write code at work — I build products on the side and stay deep in the latest AI tooling. Engineering is what I do, not just my job.</p>
                     </div>
                 </div>
             </div>
