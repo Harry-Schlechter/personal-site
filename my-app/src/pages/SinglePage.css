@@ -54,12 +54,13 @@
 
 /* ===== HERO ===== */
 .sp-hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 40px 20px;
 }
 
 .sp-hero::before {
@@ -103,7 +104,7 @@
     font-size: 56px;
     font-weight: 800;
     color: #ffffff;
-    margin: 30px 0 8px;
+    margin: 24px 0 8px;
     letter-spacing: -1px;
     background: none;
     -webkit-text-fill-color: unset;
@@ -120,7 +121,7 @@
 .sp-hero-subtitle {
     font-size: 17px;
     color: rgba(255, 255, 255, 0.5);
-    margin: 0 0 40px;
+    margin: 0 0 30px;
     font-weight: 400;
 }
 
@@ -166,7 +167,7 @@
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .sp-hero-links a {

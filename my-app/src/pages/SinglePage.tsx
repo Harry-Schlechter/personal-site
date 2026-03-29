@@ -213,27 +213,7 @@ const SinglePage: React.FC = () => {
                     <h1 className="sp-hero-name">Harry Schlechter</h1>
                     <p className="sp-hero-title">Senior Software Engineer</p>
                     <p className="sp-hero-subtitle">Building enterprise AI platforms at Trinity Life Sciences</p>
-                    <div className="sp-hero-stats">
-                        <div className="sp-stat">
-                            <span className="sp-stat-number">24</span>
-                            <span className="sp-stat-label">years old</span>
-                        </div>
-                        <div className="sp-stat-divider" />
-                        <div className="sp-stat">
-                            <span className="sp-stat-number">Senior</span>
-                            <span className="sp-stat-label">in &lt;1 year</span>
-                        </div>
-                        <div className="sp-stat-divider" />
-                        <div className="sp-stat">
-                            <span className="sp-stat-number">Pitt</span>
-                            <span className="sp-stat-label">Honors, 3.92</span>
-                        </div>
-                        <div className="sp-stat-divider" />
-                        <div className="sp-stat">
-                            <span className="sp-stat-number">NYC</span>
-                            <span className="sp-stat-label">metro area</span>
-                        </div>
-                    </div>
+
                     <div className="sp-hero-links">
                         <a href="mailto:harry.schlechter391@gmail.com" aria-label="Email"><FaEnvelope /></a>
                         <a href="https://www.linkedin.com/in/harryschlechter/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
