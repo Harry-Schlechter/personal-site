@@ -1,14 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #021526; 
-    padding: 20px;
-    overflow-x: hidden;
-}
+/* Global resets moved to index.css */
 
 /* Mode Transition Wrapper with Crazy Animation */
 .mode-transition-wrapper {

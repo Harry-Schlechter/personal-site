@@ -2,6 +2,7 @@ import './App.css';
 import './theme.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import SinglePage from './pages/SinglePage';
 import About from './pages/About';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
@@ -44,11 +45,11 @@ function AppContent() {
         <Navbar />
         <main className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/* Personal Mode Routes */}
-            <Route path="/about" element={<About />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/" element={mode === 'personal' ? <SinglePage /> : <Home />} />
+            {/* Personal Mode Routes (legacy, redirect to single page) */}
+            <Route path="/about" element={mode === 'personal' ? <SinglePage /> : <About />} />
+            <Route path="/experience" element={mode === 'personal' ? <SinglePage /> : <Experience />} />
+            <Route path="/projects" element={mode === 'personal' ? <SinglePage /> : <Projects />} />
             <Route path="/hello" element={<BusinessCard />} />
             {/* Business Mode Routes */}
             <Route path="/services" element={<Services />} />
