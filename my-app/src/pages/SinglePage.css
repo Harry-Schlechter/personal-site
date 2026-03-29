@@ -52,6 +52,14 @@
     color: #ffffff;
 }
 
+.sp-dashboard-subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.35);
+    margin-top: -36px;
+    margin-bottom: 40px;
+}
+
 /* ===== HERO ===== */
 .sp-hero {
     min-height: calc(100vh - 80px);

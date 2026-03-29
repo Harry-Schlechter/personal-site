@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     if (mode !== 'personal' || location.pathname !== '/') return;
     
-    const sections = ['hero', 'about', 'skills', 'experience', 'projects', 'connect'];
+    const sections = ['hero', 'about', 'dashboard', 'skills', 'experience', 'projects', 'connect'];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
 
   const personalLinks = [
     { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
+    { id: 'dashboard', label: 'Live' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'connect', label: 'Connect' },

@@ -1,0 +1,150 @@
+/* Terminal Overlay */
+.terminal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0a0a0a;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.terminal-fade {
+    opacity: 0;
+    transform: scale(1.02);
+    pointer-events: none;
+}
+
+/* Terminal Window */
+.terminal-window {
+    width: 90%;
+    max-width: 680px;
+    background: #1a1a2e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 
+        0 0 80px rgba(110, 172, 218, 0.08),
+        0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Terminal Header Bar */
+.terminal-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.red { background: #ff5f57; }
+.dot.yellow { background: #febc2e; }
+.dot.green { background: #28c840; }
+
+.terminal-title {
+    margin-left: 16px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.35);
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+/* Terminal Body */
+.terminal-body {
+    padding: 24px;
+    min-height: 340px;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Line Types */
+.terminal-line {
+    white-space: pre;
+    min-height: 1.8em;
+}
+
+.terminal-line.command {
+    color: #6EACDA;
+}
+
+.terminal-line.output {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.terminal-line.success {
+    color: #03C988;
+    font-weight: 600;
+}
+
+.terminal-line.blank {
+    height: 1.8em;
+}
+
+/* Cursor */
+.terminal-cursor {
+    color: #6EACDA;
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+    margin-left: 1px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Skip Button */
+.terminal-skip {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.3);
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.terminal-skip:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .terminal-window {
+        width: 95%;
+    }
+
+    .terminal-body {
+        padding: 16px;
+        font-size: 12px;
+        min-height: 280px;
+    }
+
+    .terminal-skip {
+        bottom: 24px;
+        right: 24px;
+    }
+}
