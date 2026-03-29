@@ -4,9 +4,11 @@ import prof from './prof.jpeg'
 import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt, FaBrain, FaCode, FaRocket} from 'react-icons/fa'                                      
 import { Link } from 'react-router-dom';
 import resumeLink from '../ResumeLink';
+import usePageTitle from '../hooks/usePageTitle';
 
 
 const About: React.FC = () => {
+    usePageTitle('About');
     const [activeCategory, setActiveCategory] = useState<string>('all');
 
     useEffect(() => {
@@ -17,7 +19,7 @@ const About: React.FC = () => {
         'Languages': ['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'C', 'R', 'HTML', 'CSS'],
         'Frontend': ['React', 'Next.js', 'Angular', 'Material UI', 'Responsive Design'],
         'Backend': ['Node.js', 'Django', 'FastAPI', 'Spring Boot', 'Flask'],
-        'AI & ML': ['OpenAI (ChatGPT)', 'Claude', 'Llama', 'Gemini', 'GitHub Copilot', 'Prompt Engineering'],
+        'AI & ML': ['OpenAI API', 'Anthropic Claude', 'LangChain', 'Llama', 'Gemini', 'GitHub Copilot'],
         'Database': ['PostgreSQL', 'Oracle', 'BigQuery', 'Prisma', 'Supabase'],
         'Cloud & DevOps': ['AWS (ECS, RDS, S3, Lambda)', 'Google Cloud', 'Docker', 'Terraform', 'GitHub Workflows', 'Maven'],
         'Data & Messaging': ['Apache Airflow', 'Kafka', 'ActiveMQ', 'Redis', 'Data ETL'],
@@ -90,21 +92,21 @@ const About: React.FC = () => {
                             <FaBrain size={40} />
                         </div>
                         <h3>Enterprise AI Engineering</h3>
-                        <p>Building agentic and generative AI platforms deployed to leading pharmaceutical and life sciences clients using React, Node.js, TypeScript, AWS, and OpenAI.</p>
+                        <p>Building agentic and generative AI platforms deployed to leading pharmaceutical and life sciences clients. Designing multi-agent systems, communication protocols, and production-grade deployments.</p>
                     </div>
                     <div className="feature-card web-card">
                         <div className="card-icon">
                             <FaCode size={40} />
                         </div>
-                        <h3>Custom Web Development</h3>
-                        <p>Creating modern, responsive websites for local businesses, bands, and entrepreneurs. Mobile-optimized designs with cutting-edge tech stacks.</p>
+                        <h3>Full-Stack Development</h3>
+                        <p>End-to-end product development from database design to polished UIs. React, Node.js, TypeScript, AWS — building things that ship and scale.</p>
                     </div>
                     <div className="feature-card innovation-card">
                         <div className="card-icon">
                             <FaRocket size={40} />
                         </div>
-                        <h3>Continuous Innovation</h3>
-                        <p>Always exploring new technologies and methodologies. From AI agents to full-stack solutions, I stay on the cutting edge of software engineering.</p>
+                        <h3>Builder Mentality</h3>
+                        <p>I don't just write code at work — I build products on the side and stay deep in the latest AI tooling. Engineering is what I do, not just my job.</p>
                     </div>
                 </div>
             </div>
@@ -155,27 +157,27 @@ const About: React.FC = () => {
                 
                 <div className="story-card">
                     <h3>🚀 What I'm Building</h3>
-                    <p>I'm a Senior Software Engineer at Trinity Life Sciences, where I develop enterprise-grade agentic and generative AI applications deployed to leading pharmaceutical and life sciences clients. As a full-stack engineer, I build cutting-edge AI platforms using React.js, Node.js, TypeScript, AWS, and OpenAI APIs.</p>
+                    <p>I'm a Senior Software Engineer at Trinity Life Sciences, where I build AI platforms used by major pharmaceutical companies. In under a year, I went from individual contributor to owning the platform's architecture — designing agent communication protocols, leading client deployments, and becoming the team's go-to for production support. I was promoted to Senior at 24.</p>
                 </div>
 
                 <div className="story-card">
                     <h3>🎓 Educational Background</h3>
-                    <p>I graduated summa cum laude from the University of Pittsburgh's David C. Frederick Honors College with a Bachelor of Science in Computer Science and Psychology. My psychology background provides unique insights into user behavior and product design, helping me create more intuitive and effective solutions.</p>
+                    <p>I graduated summa cum laude from the University of Pittsburgh's David C. Frederick Honors College with a Bachelor of Science in Computer Science and Psychology. My psychology degree gives me a lens on how people actually interact with software — something most engineers don't think about.</p>
                 </div>
 
                 <div className="story-card">
                     <h3>💼 Beyond the Day Job</h3>
-                    <p>I design and develop custom websites for local businesses, bands, and entrepreneurs, combining technical expertise with creative design. Whether it's an AI-powered enterprise application or a sleek band website, I bring the same level of dedication and innovation to every project.</p>
+                    <p>I'm always building something. Outside of work, I develop products, contribute to side projects, and design websites for local businesses. I treat every project — whether it's an enterprise AI platform or a website for a friend's band — with the same standard of quality.</p>
                 </div>
 
                 <div className="story-card">
                     <h3>🎯 Personal Life</h3>
-                    <p>I live in Floral Park, NY and work in the Financial District. In my free time, I like to cook, try new restaurants, travel, hike, play pick-up basketball, play poker, go to hockey games, listen to audio books, and more. I like to keep myself and my mind active.</p>
+                    <p>I live in the New York metropolitan area and work in the Financial District. Outside of coding, I play pickup basketball four times a week, boulder at the climbing gym, cook almost every meal, and try to hit every good restaurant in the city. I'm also a poker player, a hockey fan, and an audiobook listener — always keeping my mind moving.</p>
                 </div>
 
                 <div className="story-card cta-card">
-                    <h3>☕ Let's Connect!</h3>
-                    <p>I love meeting and talking with new people, so feel free to connect with me or contact me! Always down to have a bite and a great conversation after work in NYC!</p>
+                    <h3>☕ Let's Connect</h3>
+                    <p>I'm always open to meeting new people. Feel free to reach out — always down for a coffee or a conversation in NYC.</p>
                     <div className="cta-buttons">
                         <a href="mailto:harry.schlechter391@gmail.com" className="cta-btn primary">Get In Touch</a>
                         <Link to="/experience" className="cta-btn secondary">View Experience</Link>

@@ -7,8 +7,10 @@ import tls from './TLS_new.jpeg'
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Experience: React.FC = () => {
+    usePageTitle('Experience');
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -30,7 +32,6 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>Filling in after settling into role</li>
                     </ul>
                 </div>
             </div>
@@ -148,7 +149,7 @@ const Experience: React.FC = () => {
                 <div className="botBox">
                     <ul>
                         <li>UTA for Intro to Programming (CS0007), Intermediate Programming in Java (CMPINF0401), and Computer Assembly & Language (CS0447)</li>
-                        <li>Assisted students in learning programming concepts to enhance learning experience by leading weekly recitation, holding office hours, and meeting with students 1:1</li>
+                        <li>Led weekly recitations, held office hours, and provided 1:1 mentoring across three CS courses</li>
                     </ul>
                 </div>
             </div>
