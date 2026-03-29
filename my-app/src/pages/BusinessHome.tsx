@@ -76,7 +76,7 @@ const BusinessHome: React.FC = () => {
                 <div className="why-grid">
                     <div className="why-card">
                         <h3>💼 Enterprise Experience</h3>
-                        <p>Software Engineer III at Trinity Life Sciences, building AI platforms for Fortune 500 clients.</p>
+                        <p>Senior Software Engineer at Trinity Life Sciences, building AI platforms for Fortune 500 clients.</p>
                     </div>
                     <div className="why-card">
                         <h3>🎨 Modern Tech Stack</h3>

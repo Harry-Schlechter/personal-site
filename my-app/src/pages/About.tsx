@@ -38,7 +38,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="hero-content">
                     <h1 className="hero-title">Harry Schlechter</h1>
-                    <p className="hero-subtitle">Software Engineer III at Trinity Life Sciences</p>
+                    <p className="hero-subtitle">Senior Software Engineer at Trinity Life Sciences</p>
                     <div className="hero-divider"></div>
                     <div className="hero-info-grid">
                         <div className="info-item">
@@ -155,7 +155,7 @@ const About: React.FC = () => {
                 
                 <div className="story-card">
                     <h3>🚀 What I'm Building</h3>
-                    <p>I'm a Software Engineer III at Trinity Life Sciences, where I develop enterprise-grade agentic and generative AI applications deployed to leading pharmaceutical and life sciences clients. As a full-stack engineer, I build cutting-edge AI platforms using React.js, Node.js, TypeScript, AWS, and OpenAI APIs.</p>
+                    <p>I'm a Senior Software Engineer at Trinity Life Sciences, where I develop enterprise-grade agentic and generative AI applications deployed to leading pharmaceutical and life sciences clients. As a full-stack engineer, I build cutting-edge AI platforms using React.js, Node.js, TypeScript, AWS, and OpenAI APIs.</p>
                 </div>
 
                 <div className="story-card">
