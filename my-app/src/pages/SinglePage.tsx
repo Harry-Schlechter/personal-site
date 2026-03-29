@@ -11,6 +11,7 @@ import grocy from './grocy.webp';
 import rooster from './rooster.png';
 import heart from './hearts2.png';
 import resumeLink from '../ResumeLink';
+import LiveDashboard from '../components/LiveDashboard';
 import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt, FaExternalLinkAlt, FaArrowDown } from 'react-icons/fa';
 
 const SinglePage: React.FC = () => {
@@ -247,6 +248,13 @@ const SinglePage: React.FC = () => {
                         <p>Pickup basketball four times a week. Bouldering at the climbing gym. Cook almost every meal. Trying to hit every good restaurant in NYC. Poker player, hockey fan, audiobook listener — always keeping my mind moving.</p>
                     </div>
                 </div>
+            </section>
+
+            {/* ===== LIVE DASHBOARD ===== */}
+            <section id="dashboard" className={`sp-section ${isVisible('dashboard') ? 'sp-visible' : ''}`}>
+                <h2 className="sp-section-title">Harry in Real Time</h2>
+                <p className="sp-dashboard-subtitle">Live data from my personal tracking system — updated daily</p>
+                <LiveDashboard />
             </section>
 
             {/* ===== SKILLS ===== */}

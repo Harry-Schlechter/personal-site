@@ -15,11 +15,21 @@ import Footer from './footer';
 import BusinessCard from './pages/BusinessCard';
 import NotFound from './pages/NotFound';
 import { ModeProvider, useMode } from './context/ModeContext';
+import TerminalIntro from './components/TerminalIntro';
+import DynoChat from './components/DynoChat';
 import { useEffect, useState } from 'react';
 
 function AppContent() {
   const { mode } = useMode();
   const [pulseClass, setPulseClass] = useState('');
+  const [terminalDone, setTerminalDone] = useState(false);
+
+  useEffect(() => {
+    // Check if terminal was already shown this session
+    if (sessionStorage.getItem('terminal-shown')) {
+      setTerminalDone(true);
+    }
+  }, []);
 
   useEffect(() => {
     // Trigger color flow effect when mode changes
@@ -41,6 +51,9 @@ function AppContent() {
 
   return (
     <div className={`app-container ${pulseClass} ${themeClass}`}>
+      {mode === 'personal' && !terminalDone && (
+        <TerminalIntro onComplete={() => setTerminalDone(true)} />
+      )}
       <Router>
         <Navbar />
         <main className="main-content">
@@ -60,6 +73,7 @@ function AppContent() {
           </Routes>
         </main>
         <Footer/>
+        {mode === 'personal' && terminalDone && <DynoChat />}
       </Router>
     </div>
   );
