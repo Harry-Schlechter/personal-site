@@ -2,24 +2,26 @@ import React from 'react';
 import './Portfolio.css';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import boxRoosterImg from './rooster.png';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Portfolio: React.FC = () => {
+  usePageTitle('Portfolio');
   const projects = [
     {
       title: "BoxRooster",
-      category: "Web Application",
-      description: "A comprehensive boxing training platform featuring workout generation, timer functionality, and progress tracking. Built with modern web technologies for optimal performance.",
+      category: "Band Website",
+      description: "A modern, mobile-optimized website for local band BoxRooster. Features responsive design, show listings, and a clean UI built with React.",
       image: boxRoosterImg,
-      technologies: ["React", "TypeScript", "CSS3", "Responsive Design"],
+      technologies: ["React", "JavaScript", "MUI", "Responsive Design"],
       features: [
-        "Custom workout generator with configurable rounds and rest periods",
-        "Interactive timer with audio cues and visual feedback",
-        "Progress tracking and workout history",
         "Mobile-first responsive design",
-        "Modern UI with smooth animations"
+        "Modern UI with smooth animations",
+        "Show and event listings",
+        "Band bio and media integration",
+        "Optimized for all screen sizes"
       ],
       link: "https://www.boxrooster.com",
-      github: "https://github.com/yourusername/boxrooster",
+      github: "https://github.com/Harry-Schlechter/boxrooster123",
       color: "#6EACDA"
     },
     {

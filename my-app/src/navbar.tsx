@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import logo from './pages/mainlogo.png'
@@ -17,11 +17,11 @@ const Navbar: React.FC = () => {
   };
 
   // Function to close navbar when clicked outside
-  const handleClickOutside = (event: { target: any; }) => {
+  const handleClickOutside = useCallback((event: { target: any; }) => {
     if (navRef.current && !navRef.current.contains(event.target)) {
       setIsNavOpen(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     // Add event listener
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
     };
-  }, []);
+  }, [handleClickOutside]);
 
   // Function to close nav on link click
   const handleLinkClick = () => {

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import { FaEnvelope, FaLinkedin, FaGithub, FaMapMarkerAlt } from 'react-icons/fa';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Contact: React.FC = () => {
+  usePageTitle('Contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -53,13 +55,14 @@ const Contact: React.FC = () => {
               </p>
 
               <div className="contact-methods">
-                <a href="mailto:harryschlechter03@gmail.com" className="contact-method">
+                <a href="mailto:harry.schlechter391@gmail.com" className="contact-method">
                   <div className="method-icon">
                     <FaEnvelope />
                   </div>
                   <div className="method-info">
                     <h3>Email</h3>
-                    <p>harryschlechter03@gmail.com</p>
+                    <p>harry.schlechter391@gmail.com</p>
+                    <p className="contact-note">You may hear from my AI assistant, Dyno 🦕</p>
                   </div>
                 </a>
 
@@ -73,7 +76,7 @@ const Contact: React.FC = () => {
                   </div>
                 </a>
 
-                <a href="https://github.com/harryschlechter" target="_blank" rel="noopener noreferrer" className="contact-method">
+                <a href="https://github.com/Harry-Schlechter" target="_blank" rel="noopener noreferrer" className="contact-method">
                   <div className="method-icon">
                     <FaGithub />
                   </div>
@@ -89,7 +92,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="method-info">
                     <h3>Location</h3>
-                    <p>Pittsburgh, PA</p>
+                    <p>New York Metropolitan Area</p>
                   </div>
                 </div>
               </div>

@@ -4,9 +4,11 @@ import prof from './prof.jpeg'
 import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt, FaBrain, FaCode, FaRocket} from 'react-icons/fa'                                      
 import { Link } from 'react-router-dom';
 import resumeLink from '../ResumeLink';
+import usePageTitle from '../hooks/usePageTitle';
 
 
 const About: React.FC = () => {
+    usePageTitle('About');
     const [activeCategory, setActiveCategory] = useState<string>('all');
 
     useEffect(() => {
@@ -170,7 +172,7 @@ const About: React.FC = () => {
 
                 <div className="story-card">
                     <h3>🎯 Personal Life</h3>
-                    <p>I live in Floral Park, NY and work in the Financial District. In my free time, I like to cook, try new restaurants, travel, hike, play pick-up basketball, play poker, go to hockey games, listen to audio books, and more. I like to keep myself and my mind active.</p>
+                    <p>I live in the New York metropolitan area and work in the Financial District. In my free time, I like to cook, try new restaurants, travel, hike, play pick-up basketball, play poker, go to hockey games, listen to audiobooks, and more. I like to keep myself and my mind active.</p>
                 </div>
 
                 <div className="story-card cta-card">

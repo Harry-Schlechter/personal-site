@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Pricing.css';
 import { FaCheck, FaStar, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import TrafficConsulting from './TrafficConsulting';
+import usePageTitle from '../hooks/usePageTitle';
 
 // Plan tier data
 interface Plan {
@@ -124,6 +125,7 @@ const addOns: AddOn[] = [
 ];
 
 const Pricing: React.FC = () => {
+  usePageTitle('Pricing');
   const [selectedPlan, setSelectedPlan] = useState(1); // Default to Standard
   const [paymentType, setPaymentType] = useState<'upfront' | 'zeroDown'>('upfront');
   const [cardViewPaymentType, setCardViewPaymentType] = useState<'upfront' | 'zeroDown'>('zeroDown'); // Card view toggle
