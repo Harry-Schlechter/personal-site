@@ -40,7 +40,7 @@ const Home: React.FC = () => {
                     </div>
                     <h1>Harry Schlechter</h1>
                     <hr></hr>
-                    <h2 className="bio">Software Engineer specializing in Agentic & Generative AI, with expertise in full-stack development and custom web solutions</h2>
+                    <h2 className="bio">Senior Software Engineer specializing in agentic and generative AI, with expertise in full-stack development</h2>
                     <button className="learn" onClick={about}>Learn More</button>
                 </div>
             </div>

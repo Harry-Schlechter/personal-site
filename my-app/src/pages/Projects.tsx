@@ -54,8 +54,8 @@ const Projects: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>Generative AI term group project for cloud computing</li>
-                        <li>Website that generates free, context aware cover letters in seconds with a user's resume and job description</li>
+                        <li>AI-powered cover letter generator — upload a resume and job description, get a tailored cover letter in seconds</li>
+                        <li>Built as a capstone project for cloud computing, deployed on GCP</li>
                         <li>Python | React.js | FastAPI | Netlify | GCP</li>
                     </ul>
                 </div>
@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
-                        <li>SteelHacks 2022 project winner of beginner track </li>
+                        <li>1st place, SteelHacks 2022 Beginner Track</li>
                         <li>Grocery app for households to manage and split groceries</li>
                         <li>Python | React.js | Flask | TypeScript</li>
                     </ul>
@@ -119,7 +119,7 @@ const Projects: React.FC = () => {
                         <p className="linkT">Resume</p></a>
             </div>
             <div className="thanks">
-                <p className="thanksP">Thank you for taking the time to learn about me, don't forget to connect or contact me!</p>
+                <p className="thanksP">Thanks for stopping by. Let's connect.</p>
             </div>
         </div>
     );
