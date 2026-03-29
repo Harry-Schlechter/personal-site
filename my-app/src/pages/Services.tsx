@@ -1,8 +1,10 @@
 import React from 'react';
 import './Services.css';
 import { FaCode, FaMobile, FaPalette, FaRocket, FaSearch, FaShoppingCart, FaCog, FaHeadset } from 'react-icons/fa';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Services: React.FC = () => {
+  usePageTitle('Services');
   const services = [
     {
       icon: <FaCode />,

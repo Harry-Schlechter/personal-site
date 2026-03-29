@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
-// import flag from './flag.webp'
 import emp from './emp.webp'
 import heart from './hearts2.png'
 import grocy from './grocy.webp'
 import rooster from './rooster.png'
 import { FaAngleRight, FaGithub,  FaGlobe} from 'react-icons/fa';
 import './Projects.css'
-import { Link } from 'react-router-dom';
 import resumeLink from '../ResumeLink';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Projects: React.FC = () => {
+    usePageTitle('Projects');
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -46,24 +46,9 @@ const Projects: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="expBox">
-                <div className="topBox">
-                    <img src={flag} alt="bny" className="compLogo"></img>
-                    <h2 className="compTitle">RedFlag</h2>
-                    <p className="date">02/24-present</p>
-                </div>
-                <div className="botBox">
-                    <ul>
-                        <li>Co-Founder, Project Manager, and Engineer for enterprise</li>
-                        <li>Social media platform, dating app, verification API, and more</li>
-                        <li>Repo is not currently available but feel free to contact me if you have any questions or are just curious</li>
-                        <li>Next.js | Supabase | Vercell | React.js | Postgres</li>
-                    </ul>
-                </div>
-            </div> */}
             <div className="expBox">
                 <div className="topBox">
-                    <img src={emp} alt="bny"  className="compLogo"></img>
+                    <img src={emp} alt="Employable AI" className="compLogo"></img>
                     <h2 className="compTitle">Employable AI</h2>
                     <p className="date">01/24-04/24</p>
                 </div>
@@ -89,7 +74,7 @@ const Projects: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={grocy}  alt="bny" className="compLogo"></img>
+                    <img src={grocy}  alt="Easy Grocy" className="compLogo"></img>
                     <h2 className="compTitle">Easy Grocy</h2>
                     <p className="date">03/22-04/22</p>
                 </div>
@@ -110,7 +95,7 @@ const Projects: React.FC = () => {
             </div>
             <div className="expBox">
                 <div className="topBox">
-                    <img src={heart}  alt="bny" className="compLogo"></img>
+                    <img src={heart}  alt="Hearts Card Game" className="compLogo"></img>
                     <h2 className="compTitle">Hearts Card Game</h2>
                     <p className="date">12/21-01/22</p>
                 </div>
@@ -130,8 +115,8 @@ const Projects: React.FC = () => {
                 </div>
             </div>
             <div className="linkBox">
-                <Link to={resumeLink}><FaAngleRight size={30} color="white"/>
-                        <p className="linkT">Resume</p></Link>
+                <a href={resumeLink} target="_blank" rel="noopener noreferrer"><FaAngleRight size={30} color="white"/>
+                        <p className="linkT">Resume</p></a>
             </div>
             <div className="thanks">
                 <p className="thanksP">Thank you for taking the time to learn about me, don't forget to connect or contact me!</p>

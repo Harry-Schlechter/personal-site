@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Navbar from './navbar';
 import Footer from './footer';
 import BusinessCard from './pages/BusinessCard';
+import NotFound from './pages/NotFound';
 import { ModeProvider, useMode } from './context/ModeContext';
 import { useEffect, useState } from 'react';
 
@@ -54,6 +55,7 @@ function AppContent() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer/>

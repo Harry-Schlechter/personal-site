@@ -7,8 +7,10 @@ import tls from './TLS_new.jpeg'
 import { FaAngleRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import usePageTitle from '../hooks/usePageTitle';
 
 const Experience: React.FC = () => {
+    usePageTitle('Experience');
 
     useEffect(() => {
         window.scrollTo(0, 0);
