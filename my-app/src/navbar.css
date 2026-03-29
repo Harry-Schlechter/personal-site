@@ -45,9 +45,14 @@
     transition: width 0.3s ease, visibility 0.3s ease;
 }
 
-.under:hover::after {
+.under:hover::after,
+.under.active-link::after {
     visibility: visible;
     width: 80%;
+}
+
+.under.active-link a {
+    color: #6EACDA;
 }
 
 .navbar-links a {
