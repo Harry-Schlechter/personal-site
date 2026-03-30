@@ -13,7 +13,7 @@ const SUGGESTED_QUESTIONS = [
     "What's he like as a teammate?",
 ];
 
-const DYNO_API_URL = process.env.REACT_APP_DYNO_CHAT_URL || '';
+const DYNO_API_URL = '/.netlify/functions/dyno-chat';
 
 const DynoChat: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -58,28 +58,24 @@ const DynoChat: React.FC = () => {
         setMessageCount(prev => prev + 1);
 
         try {
-            if (DYNO_API_URL) {
-                const response = await fetch(DYNO_API_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        messages: [...messages, userMessage].slice(-6),
-                    }),
-                });
+            const response = await fetch(DYNO_API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    messages: [...messages, userMessage].slice(-6),
+                }),
+            });
 
-                if (response.ok) {
-                    const data = await response.json();
-                    setMessages(prev => [...prev, { role: 'assistant', content: data.response }]);
-                } else {
-                    setMessages(prev => [...prev, { role: 'assistant', content: getOfflineResponse(text) }]);
-                }
+            if (response.ok) {
+                const data = await response.json();
+                setMessages(prev => [...prev, { role: 'assistant', content: data.response }]);
             } else {
-                // Offline mode — smart fallback responses
-                await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 1200));
                 setMessages(prev => [...prev, { role: 'assistant', content: getOfflineResponse(text) }]);
             }
         } catch {
-            setMessages(prev => [...prev, { role: 'assistant', content: "Hmm, I'm having trouble connecting. Try again in a sec!" }]);
+            // Fallback to offline responses if function unavailable (e.g. local dev)
+            await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 1200));
+            setMessages(prev => [...prev, { role: 'assistant', content: getOfflineResponse(text) }]);
         }
 
         setIsTyping(false);
