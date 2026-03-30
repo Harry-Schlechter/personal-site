@@ -86,6 +86,31 @@ const ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ];
 
+// Log all messages to Supabase
+async function saveToLog(ip, userAgent, content, role) {
+    const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
+    if (!supabaseKey) return;
+
+    try {
+        await fetch('https://mrgeucdjjnxexcqcmhgr.supabase.co/rest/v1/dyno_chat_logs', {
+            method: 'POST',
+            headers: {
+                'apikey': supabaseKey,
+                'Authorization': `Bearer ${supabaseKey}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                ip: (ip || 'unknown').split(',')[0].trim(),
+                user_agent: (userAgent || '').slice(0, 500),
+                role,
+                content: (content || '').slice(0, 2000),
+            }),
+        });
+    } catch {
+        // Silent fail
+    }
+}
+
 // Save contact request to Supabase — Dyno (OpenClaw) picks up on heartbeat and emails Harry
 async function saveContactRequest(reply, conversationSummary, ip) {
     const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
@@ -164,6 +189,12 @@ exports.handler = async (event) => {
             content: String(m.content || '').slice(0, 500),
         }));
 
+        // Log user message
+        const latestUser = trimmed.filter(m => m.role === 'user').slice(-1);
+        if (latestUser.length > 0) {
+            await saveToLog(ip, event.headers['user-agent'], latestUser[0].content, 'user');
+        }
+
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
@@ -188,8 +219,10 @@ exports.handler = async (event) => {
         const data = await response.json();
         let reply = data.choices?.[0]?.message?.content || "Hmm, I'm drawing a blank. Try asking something else!";
 
-        // If contact request detected, strip the tag from visible response
-        // and send notification
+        // Log assistant response
+        await saveToLog(ip, event.headers['user-agent'], reply, 'assistant');
+
+        // If contact request detected, strip the tag
         if (reply.includes('[CONTACT_REQUEST]')) {
             const conversationSummary = trimmed.map(m => `${m.role}: ${m.content}`).join('\n');
             await saveContactRequest(reply, conversationSummary, ip);
