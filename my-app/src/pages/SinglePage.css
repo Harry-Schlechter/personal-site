@@ -64,11 +64,11 @@
 .sp-hero {
     min-height: calc(100vh - 80px);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 4vh 20px 40px;
+    padding: 0 20px 40px;
 }
 
 .sp-hero::before {
