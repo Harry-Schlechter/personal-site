@@ -233,15 +233,15 @@ const SinglePage: React.FC = () => {
                 <div className="sp-about-grid">
                     <div className="sp-about-card">
                         <h3>🚀 What I Build</h3>
-                        <p>Senior Software Engineer at Trinity Life Sciences, building AI platforms for pharmaceutical companies. I design multi-agent systems, lead client deployments, and own production support for the platform.</p>
+                        <p>Senior Software Engineer at Trinity Life Sciences, where I build AI platforms for pharmaceutical companies. My work focuses on multi-agent systems, internal tooling, and making complex workflows simple for non-technical users.</p>
                     </div>
                     <div className="sp-about-card">
                         <h3>💼 Builder Mentality</h3>
-                        <p>I don't just write code at work — I build things constantly. Dyno (the chat widget on this site) is my AI life assistant built on OpenClaw with custom memory management, a Supabase database, and Telegram integration. It tracks my nutrition, manages my calendar, writes code on my repos, and nags me to journal.</p>
+                        <p>I don't just write code at work — I build things constantly. Dyno (the chat widget on this site) is my AI life assistant, built on an OpenClaw instance. I designed a custom memory architecture so it maintains context across sessions, a structured tracking system for nutrition, workouts, and finances in PostgreSQL, automated accountability check-ins, and integrations with my calendar, email, and GitHub. It genuinely runs my day-to-day life.</p>
                     </div>
                     <div className="sp-about-card">
                         <h3>🎯 Off the Clock</h3>
-                        <p>Pickup basketball four times a week. Bouldering at the climbing gym. Really like cooking. Trying to hit every good restaurant in NYC. Hockey fan, poker player, audiobook listener — always keeping my mind moving.</p>
+                        <p>Outside of work I play a lot of pickup basketball, go bouldering, cook, try new restaurants around NYC, watch hockey, play poker, listen to audiobooks, and always have music on.</p>
                     </div>
                     <div className="sp-about-card">
                         <h3>🎓 Background</h3>
