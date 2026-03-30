@@ -1,11 +1,16 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import './TerminalIntro.css';
 
 interface TerminalIntroProps {
     onComplete: () => void;
 }
 
-const LINES = [
+interface DisplayLine {
+    type: string;
+    text: string;
+}
+
+const LINES: DisplayLine[] = [
     { type: 'command', text: '> ssh harry@nyc.dev' },
     { type: 'output', text: 'Connecting to 142.251.xx.xx...' },
     { type: 'output', text: 'Authenticated. Welcome back.' },
@@ -26,78 +31,89 @@ const LINES = [
 ];
 
 const TerminalIntro: React.FC<TerminalIntroProps> = ({ onComplete }) => {
-    const [displayedLines, setDisplayedLines] = useState<typeof LINES>([]);
-    const [currentLine, setCurrentLine] = useState(0);
-    const [currentChar, setCurrentChar] = useState(0);
-    const [isTyping, setIsTyping] = useState(true);
+    const [displayedLines, setDisplayedLines] = useState<DisplayLine[]>([]);
     const [isFading, setIsFading] = useState(false);
-    const [skipClicked, setSkipClicked] = useState(false);
+    const [showCursor, setShowCursor] = useState(true);
+    const animationRef = useRef<boolean>(false);
+    const skipRef = useRef<boolean>(false);
 
     const finish = useCallback(() => {
+        sessionStorage.setItem('terminal-shown', 'true');
         setIsFading(true);
         setTimeout(() => onComplete(), 600);
     }, [onComplete]);
 
     const skip = useCallback(() => {
-        if (skipClicked) return;
-        setSkipClicked(true);
+        skipRef.current = true;
         finish();
-    }, [skipClicked, finish]);
+    }, [finish]);
 
-    // Check if already visited this session
+    // Check if already visited
     useEffect(() => {
-        const visited = sessionStorage.getItem('terminal-shown');
-        if (visited) {
+        if (sessionStorage.getItem('terminal-shown')) {
             onComplete();
         }
     }, [onComplete]);
 
-    // Typing effect
+    // Run the typing animation
     useEffect(() => {
-        if (skipClicked || !isTyping) return;
-        if (currentLine >= LINES.length) {
-            sessionStorage.setItem('terminal-shown', 'true');
-            setTimeout(() => finish(), 400);
-            return;
-        }
+        if (animationRef.current) return;
+        animationRef.current = true;
 
-        const line = LINES[currentLine];
-        const isCommand = line.type === 'command';
-        const speed = isCommand ? 35 : 8;
-        const lineDelay = line.type === 'blank' ? 100 : isCommand ? 200 : 60;
+        const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-        if (currentChar === 0 && displayedLines.length <= currentLine) {
-            // Add new empty line
-            setTimeout(() => {
-                setDisplayedLines(prev => [...prev, { ...line, text: '' }]);
-            }, lineDelay);
-            setTimeout(() => setCurrentChar(1), lineDelay + 50);
-            return;
-        }
+        const typeLines = async () => {
+            for (let i = 0; i < LINES.length; i++) {
+                if (skipRef.current) return;
 
-        if (currentChar > 0 && currentChar <= line.text.length) {
-            const timer = setTimeout(() => {
-                setDisplayedLines(prev => {
-                    const updated = [...prev];
-                    if (updated[currentLine]) {
-                        updated[currentLine] = { ...line, text: line.text.slice(0, currentChar) };
+                const line = LINES[i];
+                const isCommand = line.type === 'command';
+
+                // Pause before line
+                if (line.type === 'blank') {
+                    await sleep(150);
+                    setDisplayedLines(prev => [...prev, { type: 'blank', text: '' }]);
+                    continue;
+                }
+
+                // Add empty line first
+                await sleep(isCommand ? 300 : 80);
+                if (skipRef.current) return;
+
+                // Type character by character
+                const charDelay = isCommand ? 30 : 6;
+                for (let c = 0; c <= line.text.length; c++) {
+                    if (skipRef.current) return;
+                    const partial = line.text.slice(0, c);
+                    setDisplayedLines(prev => {
+                        const updated = [...prev];
+                        if (updated.length > i) {
+                            updated[i] = { ...line, text: partial };
+                        } else {
+                            updated.push({ ...line, text: partial });
+                        }
+                        return updated;
+                    });
+                    if (c < line.text.length) {
+                        await sleep(charDelay);
                     }
-                    return updated;
-                });
-                setCurrentChar(prev => prev + 1);
-            }, speed);
-            return () => clearTimeout(timer);
-        }
+                }
 
-        if (currentChar > line.text.length) {
-            const nextDelay = line.type === 'command' ? 300 : 80;
-            const timer = setTimeout(() => {
-                setCurrentLine(prev => prev + 1);
-                setCurrentChar(0);
-            }, nextDelay);
-            return () => clearTimeout(timer);
-        }
-    }, [currentLine, currentChar, isTyping, skipClicked, displayedLines.length, finish]);
+                // Pause after command lines
+                if (isCommand) {
+                    await sleep(200);
+                }
+            }
+
+            // Done
+            await sleep(500);
+            if (!skipRef.current) {
+                finish();
+            }
+        };
+
+        typeLines();
+    }, [finish]);
 
     return (
         <div className={`terminal-overlay ${isFading ? 'terminal-fade' : ''}`}>
@@ -114,13 +130,10 @@ const TerminalIntro: React.FC<TerminalIntroProps> = ({ onComplete }) => {
                     {displayedLines.map((line, i) => (
                         <div key={i} className={`terminal-line ${line.type}`}>
                             {line.text}
-                            {i === displayedLines.length - 1 && currentLine < LINES.length && (
-                                <span className="terminal-cursor">▋</span>
-                            )}
                         </div>
                     ))}
-                    {displayedLines.length === 0 && (
-                        <div className="terminal-line command">
+                    {showCursor && (
+                        <div className="terminal-line">
                             <span className="terminal-cursor">▋</span>
                         </div>
                     )}
