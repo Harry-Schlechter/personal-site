@@ -43,13 +43,13 @@ const SinglePage: React.FC = () => {
 
     const skillCategories = {
         'Languages': ['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'C', 'HTML', 'CSS'],
-        'Frontend': ['React', 'Next.js', 'Angular', 'Material UI'],
+        'Frontend': ['React', 'Next.js', 'Angular', 'Material UI', 'Tailwind CSS', 'Shopify'],
         'Backend': ['Node.js', 'Django', 'FastAPI', 'Spring Boot', 'Flask'],
         'AI & ML': ['OpenAI API', 'Anthropic Claude', 'LangChain', 'Llama', 'Gemini'],
         'Database': ['PostgreSQL', 'Oracle', 'BigQuery', 'Prisma', 'Supabase'],
-        'Cloud & DevOps': ['AWS', 'Google Cloud', 'Docker', 'Terraform', 'GitHub Actions'],
+        'Cloud & DevOps': ['AWS', 'Google Cloud', 'Docker', 'Terraform', 'GitHub Actions', 'Netlify'],
         'Data & Messaging': ['Apache Airflow', 'Kafka', 'ActiveMQ', 'Redis'],
-        'Tools': ['Git', 'Agile', 'JUnit', 'Mockito', 'Jest', 'Splunk']
+        'Tools': ['Git', 'Agile', 'JUnit', 'Mockito', 'Jest', 'Splunk', 'Microsoft Teams API']
     };
 
     const experiences = [
