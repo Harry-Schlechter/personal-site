@@ -354,11 +354,11 @@ const SinglePage: React.FC = () => {
             {/* ===== CONNECT ===== */}
             <section id="connect" className={`sp-section sp-section-accent ${isVisible('connect') ? 'sp-visible' : ''}`}>
                 <h2 className="sp-section-title sp-title-white">Let's Connect</h2>
-                <p className="sp-connect-text">Always open to meeting new people. Reach out — I'm always down for a coffee or a conversation in NYC.</p>
+                <p className="sp-connect-text">Want to chat? Talk to Dyno 🦕 — my AI assistant. Leave your info and he'll make sure I get back to you.</p>
                 <div className="sp-connect-links">
-                    <a href="mailto:harry.schlechter391@gmail.com" className="sp-connect-btn">
-                        <FaEnvelope /> Email Me
-                    </a>
+                    <button className="sp-connect-btn" onClick={() => document.querySelector<HTMLButtonElement>('.dyno-bubble')?.click()}>
+                        🦕 Talk to Dyno
+                    </button>
                     <a href="https://www.linkedin.com/in/harryschlechter/" target="_blank" rel="noopener noreferrer" className="sp-connect-btn">
                         <FaLinkedin /> LinkedIn
                     </a>
@@ -366,7 +366,6 @@ const SinglePage: React.FC = () => {
                         <FaGithub /> GitHub
                     </a>
                 </div>
-                <p className="sp-connect-note">You may hear from my AI assistant, Dyno 🦕</p>
             </section>
         </div>
     );

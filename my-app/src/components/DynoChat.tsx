@@ -14,6 +14,7 @@ const SUGGESTED_QUESTIONS = [
 ];
 
 const DYNO_API_URL = '/.netlify/functions/dyno-chat';
+const SESSION_ID = Math.random().toString(36).slice(2) + Date.now().toString(36);
 
 const DynoChat: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -63,6 +64,7 @@ const DynoChat: React.FC = () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     messages: [...messages, userMessage].slice(-6),
+                    sessionId: SESSION_ID,
                 }),
             });
 
