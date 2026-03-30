@@ -3,8 +3,10 @@ import './LiveDashboard.css';
 
 interface StatsData {
     exercise_this_week: number;
+    exercise_days: number;
     last_meal: string;
     journal_streak: number;
+    journal_days: number;
     caffeine_today: number;
     active_projects: number;
     github_commits: number;
@@ -52,8 +54,10 @@ const LiveDashboard: React.FC = () => {
 
     const getFallback = (): StatsData => ({
         exercise_this_week: 4,
+        exercise_days: 7,
         last_meal: 'Buffalo chicken salad',
         journal_streak: 5,
+        journal_days: 7,
         caffeine_today: 236,
         active_projects: 3,
         github_commits: 12,
@@ -94,8 +98,8 @@ const LiveDashboard: React.FC = () => {
                         <span className="ld-card-icon">💪</span>
                         <span className="ld-card-title">Exercise</span>
                     </div>
-                    <div className="ld-big-number">{data.exercise_this_week}</div>
-                    <div className="ld-big-label">workouts this week</div>
+                    <div className="ld-big-number">{data.exercise_this_week}/{data.exercise_days}</div>
+                    <div className="ld-big-label">days this week</div>
                 </div>
 
                 <div className="ld-card">
@@ -120,7 +124,7 @@ const LiveDashboard: React.FC = () => {
                         <span className="ld-card-icon">📓</span>
                         <span className="ld-card-title">Journal</span>
                     </div>
-                    <div className="ld-big-number">{data.journal_streak}</div>
+                    <div className="ld-big-number">{data.journal_streak}/{data.journal_days}</div>
                     <div className="ld-big-label">days this week</div>
                 </div>
 
