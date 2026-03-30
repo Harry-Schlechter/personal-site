@@ -11,6 +11,7 @@ import grocy from './grocy.webp';
 import rooster from './rooster.png';
 import heart from './hearts2.png';
 import resumeLink from '../ResumeLink';
+import LiveDashboard from '../components/LiveDashboard';
 import { FaEnvelope, FaLinkedin, FaGithub, FaFileAlt, FaExternalLinkAlt, FaArrowDown } from 'react-icons/fa';
 
 const SinglePage: React.FC = () => {
@@ -42,13 +43,13 @@ const SinglePage: React.FC = () => {
 
     const skillCategories = {
         'Languages': ['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'C', 'HTML', 'CSS'],
-        'Frontend': ['React', 'Next.js', 'Angular', 'Material UI'],
+        'Frontend': ['React', 'Next.js', 'Angular', 'Material UI', 'Tailwind CSS', 'Shopify'],
         'Backend': ['Node.js', 'Django', 'FastAPI', 'Spring Boot', 'Flask'],
         'AI & ML': ['OpenAI API', 'Anthropic Claude', 'LangChain', 'Llama', 'Gemini'],
         'Database': ['PostgreSQL', 'Oracle', 'BigQuery', 'Prisma', 'Supabase'],
-        'Cloud & DevOps': ['AWS', 'Google Cloud', 'Docker', 'Terraform', 'GitHub Actions'],
+        'Cloud & DevOps': ['AWS', 'Google Cloud', 'Docker', 'Terraform', 'GitHub Actions', 'Netlify'],
         'Data & Messaging': ['Apache Airflow', 'Kafka', 'ActiveMQ', 'Redis'],
-        'Tools': ['Git', 'Agile', 'JUnit', 'Mockito', 'Jest', 'Splunk']
+        'Tools': ['Git', 'Agile', 'JUnit', 'Mockito', 'Jest', 'Splunk', 'Microsoft Teams API']
     };
 
     const experiences = [
@@ -232,21 +233,28 @@ const SinglePage: React.FC = () => {
                 <div className="sp-about-grid">
                     <div className="sp-about-card">
                         <h3>🚀 What I Build</h3>
-                        <p>I'm a Senior Software Engineer at Trinity Life Sciences, where I build AI platforms used by major pharmaceutical companies. In under a year, I went from individual contributor to owning the platform's architecture — designing agent communication protocols, leading client deployments, and becoming the team's go-to for production support. Promoted to Senior at 24.</p>
-                    </div>
-                    <div className="sp-about-card">
-                        <h3>🎓 Background</h3>
-                        <p>Graduated summa cum laude from the University of Pittsburgh's Honors College with a B.S. in Computer Science and Psychology. The psychology degree gives me a lens on how people actually interact with software — something most engineers don't think about.</p>
+                        <p>Senior Software Engineer at Trinity Life Sciences, where I build AI platforms for pharmaceutical companies. My work focuses on multi-agent systems, internal tooling, and making complex workflows simple for non-technical users.</p>
                     </div>
                     <div className="sp-about-card">
                         <h3>💼 Builder Mentality</h3>
-                        <p>I don't just write code at work — I build products on the side and stay deep in the latest AI tooling. Engineering is what I do, not just my job.</p>
+                        <p>I don't just write code at work — I build things constantly. Dyno (the chat widget on this site) is my AI life assistant, built on an OpenClaw instance. It has custom memory management, tracks my nutrition/workouts/finances in PostgreSQL, integrates with my calendar, email, and GitHub, and helps run my life.</p>
                     </div>
                     <div className="sp-about-card">
                         <h3>🎯 Off the Clock</h3>
-                        <p>Pickup basketball four times a week. Bouldering at the climbing gym. Cook almost every meal. Trying to hit every good restaurant in NYC. Poker player, hockey fan, audiobook listener — always keeping my mind moving.</p>
+                        <p>Outside of work I play a lot of pickup basketball, go bouldering, cook, try new restaurants around NYC, watch hockey, play poker, listen to audiobooks, and always have music on.</p>
+                    </div>
+                    <div className="sp-about-card">
+                        <h3>🎓 Background</h3>
+                        <p>B.S. in Computer Science and Psychology from the University of Pittsburgh. The psychology background gives me a lens on how people actually interact with software — something most engineers don't think about.</p>
                     </div>
                 </div>
+            </section>
+
+            {/* ===== LIVE DASHBOARD ===== */}
+            <section id="dashboard" className={`sp-section ${isVisible('dashboard') ? 'sp-visible' : ''}`}>
+                <h2 className="sp-section-title">Harry in Real Time</h2>
+                <p className="sp-dashboard-subtitle">Live data from my personal tracking system — updated daily</p>
+                <LiveDashboard />
             </section>
 
             {/* ===== SKILLS ===== */}

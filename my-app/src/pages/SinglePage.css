@@ -52,15 +52,23 @@
     color: #ffffff;
 }
 
+.sp-dashboard-subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.35);
+    margin-top: -36px;
+    margin-bottom: 40px;
+}
+
 /* ===== HERO ===== */
 .sp-hero {
-    min-height: calc(100vh - 80px);
+    min-height: 0;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 12vh 20px 40px;
+    padding: 40px 20px 60px;
 }
 
 .sp-hero::before {

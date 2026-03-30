@@ -1,0 +1,317 @@
+/* Chat Bubble */
+.dyno-bubble {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1a6b4a 0%, #0d4a33 100%);
+    border: 1px solid rgba(3, 201, 136, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(3, 201, 136, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.dyno-bubble:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(3, 201, 136, 0.35);
+}
+
+.dyno-bubble-emoji {
+    font-size: 26px;
+}
+
+.dyno-bubble-hint {
+    position: absolute;
+    right: 68px;
+    white-space: nowrap;
+    background: #1a1a2e;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    animation: hintSlide 0.4s ease-out;
+}
+
+.dyno-bubble-hint::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-left-color: #1a1a2e;
+}
+
+@keyframes hintSlide {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.dyno-nudge {
+    animation: nudgeBounce 0.5s ease;
+}
+
+@keyframes nudgeBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+/* Chat Window */
+.dyno-window {
+    position: fixed;
+    bottom: 96px;
+    right: 28px;
+    width: 380px;
+    max-height: 520px;
+    background: #0f1923;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1001;
+    animation: chatOpen 0.3s ease-out;
+}
+
+@keyframes chatOpen {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Header */
+.dyno-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dyno-header-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dyno-header-emoji {
+    font-size: 24px;
+}
+
+.dyno-header-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.dyno-header-status {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.dyno-close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s;
+}
+
+.dyno-close:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Messages */
+.dyno-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 360px;
+}
+
+.dyno-messages::-webkit-scrollbar {
+    width: 4px;
+}
+
+.dyno-messages::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.dyno-msg {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.dyno-msg p {
+    margin: 0 0 8px;
+}
+
+.dyno-msg p:last-child {
+    margin-bottom: 0;
+}
+
+.dyno-msg-assistant {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.8);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.dyno-msg-user {
+    background: rgba(110, 172, 218, 0.15);
+    border: 1px solid rgba(110, 172, 218, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+/* Suggestions */
+.dyno-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.dyno-suggestion {
+    background: rgba(110, 172, 218, 0.08);
+    border: 1px solid rgba(110, 172, 218, 0.15);
+    color: #6EACDA;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.dyno-suggestion:hover {
+    background: rgba(110, 172, 218, 0.15);
+    border-color: rgba(110, 172, 218, 0.3);
+}
+
+/* Typing Indicator */
+.dyno-typing {
+    display: flex;
+    gap: 4px;
+    padding: 4px 0;
+}
+
+.dyno-typing span {
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: typingDot 1.4s ease-in-out infinite;
+}
+
+.dyno-typing span:nth-child(2) { animation-delay: 0.2s; }
+.dyno-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typingDot {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Rate Limit */
+.dyno-limit {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    padding: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Input */
+.dyno-input-bar {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    gap: 8px;
+}
+
+.dyno-input-bar input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.dyno-input-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.dyno-input-bar input:focus {
+    border-color: rgba(110, 172, 218, 0.3);
+}
+
+.dyno-input-bar button {
+    background: #6EACDA;
+    border: none;
+    color: #021526;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dyno-input-bar button:hover:not(:disabled) {
+    background: #85c0e8;
+}
+
+.dyno-input-bar button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .dyno-window {
+        right: 12px;
+        left: 12px;
+        bottom: 84px;
+        width: auto;
+        max-height: 70vh;
+    }
+
+    .dyno-bubble {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .dyno-bubble-hint {
+        display: none;
+    }
+}
