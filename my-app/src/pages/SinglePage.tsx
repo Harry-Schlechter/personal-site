@@ -237,7 +237,7 @@ const SinglePage: React.FC = () => {
                     </div>
                     <div className="sp-about-card">
                         <h3>💼 Builder Mentality</h3>
-                        <p>I don't just write code at work — I build things constantly. Dyno (the chat widget on this site) is my AI life assistant, built on an OpenClaw instance. I designed a custom memory architecture so it maintains context across sessions, a structured tracking system for nutrition, workouts, and finances in PostgreSQL, automated accountability check-ins, and integrations with my calendar, email, and GitHub. It genuinely runs my day-to-day life.</p>
+                        <p>I don't just write code at work — I build things constantly. Dyno (the chat widget on this site) is my AI life assistant, built on an OpenClaw instance. It has custom memory management, tracks my nutrition/workouts/finances in PostgreSQL, integrates with my calendar, email, and GitHub, and helps run my life.</p>
                     </div>
                     <div className="sp-about-card">
                         <h3>🎯 Off the Clock</h3>
