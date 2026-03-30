@@ -33,7 +33,7 @@ const LINES: DisplayLine[] = [
 const TerminalIntro: React.FC<TerminalIntroProps> = ({ onComplete }) => {
     const [displayedLines, setDisplayedLines] = useState<DisplayLine[]>([]);
     const [isFading, setIsFading] = useState(false);
-    const [showCursor, setShowCursor] = useState(true);
+    const [showCursor] = useState(true);
     const animationRef = useRef<boolean>(false);
     const skipRef = useRef<boolean>(false);
 
