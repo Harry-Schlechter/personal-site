@@ -2,7 +2,7 @@
   base = "my-app"
   command = "npm run build"
   publish = "build"
-  functions = "../netlify/functions"
+  functions = "netlify/functions"
 
 [functions]
   node_bundler = "esbuild"
