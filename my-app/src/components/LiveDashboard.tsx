@@ -92,7 +92,7 @@ const LiveDashboard: React.FC = () => {
             totalDaysTracked: 28,
             journalStreak: 5,
             caffeineToday: 200,
-            activeProjects: ['Camber', 'LinedUp', 'Dyno'],
+            activeProjects: ['Dyno', 'Boxrooster', 'Personal Site'],
         },
         lastUpdated: new Date().toISOString(),
     });

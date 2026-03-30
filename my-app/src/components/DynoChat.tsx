@@ -89,7 +89,7 @@ const DynoChat: React.FC = () => {
         const q = question.toLowerCase();
 
         if (q.includes('working on') || q.includes('current') || q.includes('building')) {
-            return "Harry's a Senior Software Engineer at Trinity Life Sciences, building enterprise AI platforms for pharma clients. On the side, he's working on Camber (AI for civil engineering), LinedUp (a line-skip app for nightlife), and me — Dyno, his AI life assistant. The guy doesn't stop building.";
+            return "Harry's a Senior Software Engineer at Trinity Life Sciences, building enterprise AI platforms for pharma clients. On the side, he built me — Dyno, his AI life assistant that manages his entire life. He's always building something new. The guy doesn't stop.";
         }
         if (q.includes('tech stack') || q.includes('technologies') || q.includes('languages')) {
             return "His core stack is React, Node.js, TypeScript, and AWS. At Trinity he works heavily with OpenAI and LangChain for the AI platform. He's also deep into Python, PostgreSQL, and has production experience with Kafka, Redis, Docker, and Terraform. Full-stack through and through.";

@@ -23,7 +23,7 @@ const LINES: DisplayLine[] = [
     { type: 'output', text: 'Location: NYC Metro' },
     { type: 'blank', text: '' },
     { type: 'command', text: '> ls ~/projects/' },
-    { type: 'output', text: 'camber/    lined-up/    dyno/    boxrooster/' },
+    { type: 'output', text: 'dyno/    boxrooster/    employable-ai/    easy-grocy/' },
     { type: 'blank', text: '' },
     { type: 'command', text: '> ./launch-portfolio.sh' },
     { type: 'output', text: 'Building portfolio...' },
