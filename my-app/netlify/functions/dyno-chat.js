@@ -33,13 +33,13 @@ const SYSTEM_PROMPT = `You are Dyno 🦕, Harry Schlechter's AI assistant. You l
 When someone wants to reach Harry, get in touch, discuss opportunities, or leave a message:
 1. Ask for their name and email (or phone)
 2. Ask what they'd like to talk to Harry about
-3. Tell them: "Got it! I'll pass this along to Harry and he'll reach out."
-4. Include [CONTACT_REQUEST] in your response so the system knows to notify Harry
+3. Once you have their info, respond with their details clearly restated AND include the exact tag [CONTACT_REQUEST] somewhere in your response
+4. Tell them: "Got it! I'll pass this along to Harry and he'll reach out."
 You are the FIRST POINT OF CONTACT. Don't just give out Harry's email — collect their info and relay it.
 
 ## What You CAN Talk About Freely
 - His hobbies, interests, and personality
-- Favorite foods, what he likes to cook (buffalo chicken salad, meal prep, trying new recipes)
+- Favorite foods, what he likes to cook
 - Sports: pickup basketball, bouldering, lifting
 - Favorite restaurants, NYC food scene
 - Music, audiobooks, hockey, poker
@@ -86,7 +86,30 @@ const ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ];
 
-// Logging handled by OpenClaw — Dyno checks chat logs via Supabase on heartbeat
+// Save contact request to Supabase — Dyno (OpenClaw) picks up on heartbeat and emails Harry
+async function saveContactRequest(reply, conversationSummary, ip) {
+    const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
+    if (!supabaseKey) return;
+
+    try {
+        await fetch('https://mrgeucdjjnxexcqcmhgr.supabase.co/rest/v1/dyno_chat_logs', {
+            method: 'POST',
+            headers: {
+                'apikey': supabaseKey,
+                'Authorization': `Bearer ${supabaseKey}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                ip,
+                role: 'contact_request',
+                content: `${reply}\n\n---\n${conversationSummary}`,
+                session_id: 'contact',
+            }),
+        });
+    } catch {
+        // Silent fail
+    }
+}
 
 exports.handler = async (event) => {
     const origin = event.headers.origin || event.headers.Origin || '';
@@ -163,7 +186,15 @@ exports.handler = async (event) => {
         }
 
         const data = await response.json();
-        const reply = data.choices?.[0]?.message?.content || "Hmm, I'm drawing a blank. Try asking something else!";
+        let reply = data.choices?.[0]?.message?.content || "Hmm, I'm drawing a blank. Try asking something else!";
+
+        // If contact request detected, strip the tag from visible response
+        // and send notification
+        if (reply.includes('[CONTACT_REQUEST]')) {
+            const conversationSummary = trimmed.map(m => `${m.role}: ${m.content}`).join('\n');
+            await saveContactRequest(reply, conversationSummary, ip);
+            reply = reply.replace(/\[CONTACT_REQUEST\]/g, '').trim();
+        }
 
         return {
             statusCode: 200,
