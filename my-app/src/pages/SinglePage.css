@@ -68,7 +68,7 @@
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 12vh 20px 40px;
+    padding: 4vh 20px 40px;
 }
 
 .sp-hero::before {
