@@ -233,19 +233,19 @@ const SinglePage: React.FC = () => {
                 <div className="sp-about-grid">
                     <div className="sp-about-card">
                         <h3>🚀 What I Build</h3>
-                        <p>I'm a Senior Software Engineer at Trinity Life Sciences, where I build AI platforms used by major pharmaceutical companies. In under a year, I went from individual contributor to owning the platform's architecture — designing agent communication protocols, leading client deployments, and becoming the team's go-to for production support. Promoted to Senior at 24.</p>
-                    </div>
-                    <div className="sp-about-card">
-                        <h3>🎓 Background</h3>
-                        <p>Graduated summa cum laude from the University of Pittsburgh's Honors College with a B.S. in Computer Science and Psychology. The psychology degree gives me a lens on how people actually interact with software — something most engineers don't think about.</p>
+                        <p>Senior Software Engineer at Trinity Life Sciences, building AI platforms for pharmaceutical companies. I design multi-agent systems, lead client deployments, and own production support for the platform.</p>
                     </div>
                     <div className="sp-about-card">
                         <h3>💼 Builder Mentality</h3>
-                        <p>I don't just write code at work — I build products on the side and stay deep in the latest AI tooling. Engineering is what I do, not just my job.</p>
+                        <p>I don't just write code at work — I build things constantly. Dyno (the chat widget on this site) is my AI life assistant built on OpenClaw with custom memory management, a Supabase database, and Telegram integration. It tracks my nutrition, manages my calendar, writes code on my repos, and nags me to journal.</p>
                     </div>
                     <div className="sp-about-card">
                         <h3>🎯 Off the Clock</h3>
-                        <p>Pickup basketball four times a week. Bouldering at the climbing gym. Cook almost every meal. Trying to hit every good restaurant in NYC. Poker player, hockey fan, audiobook listener — always keeping my mind moving.</p>
+                        <p>Pickup basketball four times a week. Bouldering at the climbing gym. Really like cooking. Trying to hit every good restaurant in NYC. Hockey fan, poker player, audiobook listener — always keeping my mind moving.</p>
+                    </div>
+                    <div className="sp-about-card">
+                        <h3>🎓 Background</h3>
+                        <p>B.S. in Computer Science and Psychology from the University of Pittsburgh. The psychology background gives me a lens on how people actually interact with software — something most engineers don't think about.</p>
                     </div>
                 </div>
             </section>
