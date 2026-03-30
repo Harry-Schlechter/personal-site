@@ -86,35 +86,7 @@ const ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ];
 
-const SUPABASE_URL = 'https://mrgeucdjjnxexcqcmhgr.supabase.co/rest/v1';
-
-async function logToSupabase(ip, userAgent, referrer, sessionId, messages) {
-    const supabaseKey = process.env.SUPABASE_SERVICE_KEY;
-    if (!supabaseKey) return;
-
-    try {
-        const rows = messages.map((m) => ({
-            ip: ip || 'unknown',
-            user_agent: (userAgent || '').slice(0, 500),
-            referrer: (referrer || '').slice(0, 500),
-            session_id: sessionId || 'unknown',
-            role: m.role,
-            content: (m.content || '').slice(0, 2000),
-        }));
-
-        await fetch(`${SUPABASE_URL}/dyno_chat_logs`, {
-            method: 'POST',
-            headers: {
-                'apikey': supabaseKey,
-                'Authorization': `Bearer ${supabaseKey}`,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(rows),
-        });
-    } catch {
-        // Silent fail — don't break chat for logging
-    }
-}
+// Logging handled by OpenClaw — Dyno checks chat logs via Supabase on heartbeat
 
 exports.handler = async (event) => {
     const origin = event.headers.origin || event.headers.Origin || '';
@@ -154,7 +126,7 @@ exports.handler = async (event) => {
     }
 
     try {
-        const { messages, sessionId } = JSON.parse(event.body);
+        const { messages } = JSON.parse(event.body);
 
         if (!Array.isArray(messages) || messages.length === 0) {
             return {
@@ -168,18 +140,6 @@ exports.handler = async (event) => {
             role: m.role === 'assistant' ? 'assistant' : 'user',
             content: String(m.content || '').slice(0, 500),
         }));
-
-        // Log the latest user message
-        const latestUser = trimmed.filter(m => m.role === 'user').slice(-1);
-        if (latestUser.length > 0) {
-            await logToSupabase(
-                ip,
-                event.headers['user-agent'],
-                event.headers['referer'] || event.headers['referrer'],
-                sessionId,
-                latestUser
-            );
-        }
 
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
@@ -204,15 +164,6 @@ exports.handler = async (event) => {
 
         const data = await response.json();
         const reply = data.choices?.[0]?.message?.content || "Hmm, I'm drawing a blank. Try asking something else!";
-
-        // Log the assistant response too
-        await logToSupabase(
-            ip,
-            event.headers['user-agent'],
-            event.headers['referer'] || event.headers['referrer'],
-            sessionId,
-            [{ role: 'assistant', content: reply }]
-        );
 
         return {
             statusCode: 200,
