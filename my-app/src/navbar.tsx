@@ -5,7 +5,6 @@ import { FaBars } from 'react-icons/fa';
 import { useMode } from './context/ModeContext';
 import ModeToggle from './components/ModeToggle';
 import { Link, useLocation } from 'react-router-dom';
-import resumeLink from './ResumeLink';
 
 const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);

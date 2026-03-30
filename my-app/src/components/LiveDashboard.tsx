@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './LiveDashboard.css';
 
 interface StatsData {
@@ -20,13 +20,7 @@ const LiveDashboard: React.FC = () => {
     const [loading, setLoading] = useState(true);
     const [isLive, setIsLive] = useState(false);
 
-    useEffect(() => {
-        fetchData();
-        const interval = setInterval(fetchData, 5 * 60 * 1000);
-        return () => clearInterval(interval);
-    }, []);
-
-    const fetchData = async () => {
+    const fetchData = useCallback(async () => {
         try {
             if (SUPABASE_ANON_KEY) {
                 const response = await fetch(`${SUPABASE_URL}/rpc/public_dashboard_stats`, {
@@ -50,7 +44,13 @@ const LiveDashboard: React.FC = () => {
             setData(getFallback());
         }
         setLoading(false);
-    };
+    }, []);
+
+    useEffect(() => {
+        fetchData();
+        const interval = setInterval(fetchData, 5 * 60 * 1000);
+        return () => clearInterval(interval);
+    }, [fetchData]);
 
     const getFallback = (): StatsData => ({
         exercise_this_week: 4,
