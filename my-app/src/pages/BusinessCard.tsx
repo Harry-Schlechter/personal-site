@@ -179,7 +179,7 @@ const BusinessCard = () => {
                 <tbody>
                   <tr>
                     <td style={{ textAlign: "center"}}>
-                      <a href="https://harryschlechter.netlify.app/">
+                      <a href="https://harryschlechter.com/">
                         <img style={{marginTop: "-80px" }}src={logo} alt="Logo" />
                       </a>
                     </td>
@@ -211,7 +211,7 @@ const BusinessCard = () => {
                             <FaGithub />
                           </div>
                         </a>
-                        <a href="https://drive.google.com/file/d/1hQRMWD1toqAyb3wLDcLScXcfzv52i9Ee/view">
+                        <a href="https://drive.google.com/file/d/1Be4i36zX0Fp2UjcGw6wBKXJ7vi6K3qrS/view?usp=sharing">
                           <div className="icon-circle">
                             <FaFileAlt />
                           </div>
