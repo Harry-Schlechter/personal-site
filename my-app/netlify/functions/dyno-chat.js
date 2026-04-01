@@ -81,7 +81,7 @@ function checkRateLimit(ip) {
 }
 
 const ALLOWED_ORIGINS = [
-    'https://harryschlechter.netlify.app',
+    'https://harryschlechter.com',
     'https://harryschlechter.com',
     'http://localhost:3000',
 ];
