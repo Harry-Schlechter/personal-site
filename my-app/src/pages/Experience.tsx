@@ -32,6 +32,13 @@ const Experience: React.FC = () => {
                 </div>
                 <div className="botBox">
                     <ul>
+                        <li>Led technical delivery for a cross-functional team including a frontend engineer and intern — managing scoping, product alignment, and prioritization across concurrent initiatives</li>
+                        <li>Coordinated integration of 50+ AI pharma advisors into a unified client platform — aligning technical requirements across 15+ solution owners spanning client, client engineering, and product teams</li>
+                        <li>Competed in a major pharma client vendor hackathon — built 5 production-ready LangChain agents and 30+ reusable tools integrating live client data end-to-end in under one month</li>
+                        <li>Designed and shipped a configurable dashboard builder enabling non-technical business users to create and deploy custom dashboards within the platform, including a code widget framework for technical teams</li>
+                        <li>Drove platform evolution toward a generalized agentic architecture using LangChain deep agents, designing modular interfaces for external engineering teams to plug in custom AI workflows without core platform changes</li>
+                        <li>Built a configurable external agent response builder and established MCP connections to standardize AI model interfacing across the platform</li>
+                        <li>Drove company-wide AI adoption by authoring AGENTS.md engineering standards and leading team enablement on LLM tooling</li>
                     </ul>
                 </div>
             </div>

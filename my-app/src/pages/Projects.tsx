@@ -3,6 +3,7 @@ import emp from './emp.webp'
 import heart from './hearts2.png'
 import grocy from './grocy.webp'
 import rooster from './rooster.png'
+import dyno from './mainlogo.png'
 import { FaAngleRight, FaGithub,  FaGlobe} from 'react-icons/fa';
 import './Projects.css'
 import resumeLink from '../ResumeLink';
@@ -19,6 +20,29 @@ const Projects: React.FC = () => {
         <div className="exp-container">
             <div className="expBoxTop">
                 <h1 className="expTitle">Featured Projects</h1>
+            </div>
+            <div className="expBox">
+                <div className="topBox">
+                    <img src={dyno} alt="Dyno AI" className="compLogo"></img>
+                    <h2 className="compTitle">Dyno AI</h2>
+                    <p className="date">2025-pres</p>
+                </div>
+                <div className="botBox">
+                    <ul>
+                        <li>Personal life OS with an AI agent runtime — SMS/Telegram interface for health, fitness, finance, and scheduling via natural conversation</li>
+                        <li>Multi-agent system: automated morning briefings, evening check-ins, daily financial sync, and Google Calendar integration</li>
+                        <li>Chrome extension for universal capture routed to Supabase with AI-powered categorization</li>
+                        <li>Custom generated dashboard pages (Spaces) — trip recaps, project hubs, and weekly reports as declarative React pages, auto-deployed to Netlify</li>
+                        <li>React | TypeScript | Supabase | Node.js | Netlify | OpenClaw</li>
+                    </ul>
+                </div>
+                <div className='projLinks'>
+                    <div className="linkBoxProj">
+                        <a href="https://github.com/Harry-Schlechter/openclaw-lifeos">
+                            <FaGithub size={30} color="black"/>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div className="expBox">
                 <div className="topBox">
